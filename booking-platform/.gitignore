@@ -1,0 +1,40 @@
+*.mwb.bak
+*.pyc
+
+.DS_Store
+.idea
+.tox
+
+**/.env
+.env
+.sentryclirc
+SECRET_KEY
+
+# Third party packages
+bower_components
+node_modules
+requirements/src
+/src
+
+# dev files
+frontend/dev/*
+frontend/dist/report-analyze.html
+venv/
+django-root/django.pid
+mprocs.yaml
+
+# Media files
+assets/
+media/
+
+# Log files
+log/
+npm-debug.log
+
+# Temp files
+django-root/temp/*
+dev/
+bin.test/python3.*
+dump.rdb
+
+cypress/videos/
