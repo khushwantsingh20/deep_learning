@@ -1,0 +1,90 @@
+.filterItem {
+  :global(.ant-form-item-control),
+  :global(.ant-form-item-label) {
+    line-height: 25px;
+  }
+}
+
+.filterLastColumn {
+  text-align: right;
+}
+
+.filterRow {
+  line-height: 25px;
+
+  :global(.ant-form-item-control),
+  :global(.ant-form-item-label) {
+    line-height: 25px;
+  }
+}
+
+.revenueFilter {
+  :global(.ant-form-item-label) {
+    font-weight: normal;
+    ::after {
+      content: '';
+    }
+  }
+
+  :global {
+    .ant-calendar-picker .ant-input {
+      font-weight: bold;
+    }
+  }
+}
+
+.driverSummaryTitle {
+  font-size: 26px;
+
+  span {
+    font-size: 18px;
+    font-weight: normal;
+  }
+}
+
+.listTable {
+  :global {
+    .ant-table-tbody > tr > td {
+      vertical-align: top;
+    }
+  }
+}
+
+.driverRevenueView {
+  :global {
+    .ant-table-wrapper {
+      font-family: 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .ant-table table {
+      width: auto;
+
+      th {
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      td {
+        font-size: 14px;
+      }
+    }
+
+    .ant-table-footer {
+      padding-left: 0;
+      padding-right: 0;
+      background: none;
+    }
+
+    .ant-table-thead > tr > th,
+    .ant-table-tbody > tr > td,
+    .ant-table-footer tr > td,
+    .ant-table-footer tr > th {
+      padding: 3pt 6px 1px;
+    }
+
+    .ant-table-footer tr > td,
+    .ant-table-footer tr > th {
+      font-weight: bold;
+    }
+  }
+}

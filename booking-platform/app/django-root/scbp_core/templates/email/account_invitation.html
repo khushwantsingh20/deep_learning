@@ -1,0 +1,44 @@
+{% extends './limomate_client_email_base.html' %}
+
+{% block title %}Limomate billing account invitation{% endblock title %}
+
+{% block header %}Join a billing account{% endblock header %}
+
+{% block emailcontent %}
+  <p>
+    Hello {{ invitee_name }},
+  </p>
+  <p>
+    You have been invited by <strong>{{ inviter_name }}</strong> to join their <strong>'{{ inviter_account }}'</strong>
+    account with Limomate by Southern Cross.
+  </p>
+  {% if additional_message %}
+    <p>{{ additional_message }}</p>
+  {% endif %}
+
+  <p>
+    To accept this invitation, please click below and use {{ invitee_email }} to {% if is_existing_user %}log in{% else %}register{% endif %}.
+  </p>
+
+  <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="btn btn-primary">
+    <tbody>
+    <tr>
+      <td align="left">
+        <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+          <tbody>
+          <tr>
+            <td><a href="{{ invitation_url }}" target="_blank">Accept your invitation</a></td>
+          </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <p>
+    We look forward to transporting you in comfort and on time.
+  </p>
+  <p>Kind Regards,<br />
+    Limomate by Southern Cross</p>
+{% endblock emailcontent %}

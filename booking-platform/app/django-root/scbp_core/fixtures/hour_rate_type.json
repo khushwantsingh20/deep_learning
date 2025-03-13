@@ -1,0 +1,866 @@
+[
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 1,
+    "fields": {
+      "day_type": 1,
+      "hour": 0,
+      "hour_type": 4
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 2,
+    "fields": {
+      "day_type": 1,
+      "hour": 1,
+      "hour_type": 4
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 3,
+    "fields": {
+      "day_type": 1,
+      "hour": 2,
+      "hour_type": 4
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 4,
+    "fields": {
+      "day_type": 1,
+      "hour": 3,
+      "hour_type": 4
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 5,
+    "fields": {
+      "day_type": 1,
+      "hour": 4,
+      "hour_type": 4
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 6,
+    "fields": {
+      "day_type": 1,
+      "hour": 5,
+      "hour_type": 2
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 7,
+    "fields": {
+      "day_type": 1,
+      "hour": 6,
+      "hour_type": 2
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 8,
+    "fields": {
+      "day_type": 1,
+      "hour": 7,
+      "hour_type": 3
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 9,
+    "fields": {
+      "day_type": 1,
+      "hour": 8,
+      "hour_type": 3
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 10,
+    "fields": {
+      "day_type": 1,
+      "hour": 9,
+      "hour_type": 3
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 11,
+    "fields": {
+      "day_type": 1,
+      "hour": 10,
+      "hour_type": 1
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 12,
+    "fields": {
+      "day_type": 1,
+      "hour": 11,
+      "hour_type": 1
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 13,
+    "fields": {
+      "day_type": 1,
+      "hour": 12,
+      "hour_type": 1
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 14,
+    "fields": {
+      "day_type": 1,
+      "hour": 13,
+      "hour_type": 1
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 15,
+    "fields": {
+      "day_type": 1,
+      "hour": 14,
+      "hour_type": 1
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 16,
+    "fields": {
+      "day_type": 1,
+      "hour": 15,
+      "hour_type": 2
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 17,
+    "fields": {
+      "day_type": 1,
+      "hour": 16,
+      "hour_type": 3
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 18,
+    "fields": {
+      "day_type": 1,
+      "hour": 17,
+      "hour_type": 3
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 19,
+    "fields": {
+      "day_type": 1,
+      "hour": 18,
+      "hour_type": 3
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 20,
+    "fields": {
+      "day_type": 1,
+      "hour": 19,
+      "hour_type": 2
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 21,
+    "fields": {
+      "day_type": 1,
+      "hour": 20,
+      "hour_type": 2
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 22,
+    "fields": {
+      "day_type": 1,
+      "hour": 21,
+      "hour_type": 2
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 23,
+    "fields": {
+      "day_type": 1,
+      "hour": 22,
+      "hour_type": 2
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 24,
+    "fields": {
+      "day_type": 1,
+      "hour": 23,
+      "hour_type": 4
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 25,
+    "fields": {
+      "day_type": 2,
+      "hour": 0,
+      "hour_type": 4
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 26,
+    "fields": {
+      "day_type": 2,
+      "hour": 1,
+      "hour_type": 4
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 27,
+    "fields": {
+      "day_type": 2,
+      "hour": 2,
+      "hour_type": 4
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 28,
+    "fields": {
+      "day_type": 2,
+      "hour": 3,
+      "hour_type": 4
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 29,
+    "fields": {
+      "day_type": 2,
+      "hour": 4,
+      "hour_type": 4
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 30,
+    "fields": {
+      "day_type": 2,
+      "hour": 5,
+      "hour_type": 2
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 31,
+    "fields": {
+      "day_type": 2,
+      "hour": 6,
+      "hour_type": 2
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 32,
+    "fields": {
+      "day_type": 2,
+      "hour": 7,
+      "hour_type": 2
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 33,
+    "fields": {
+      "day_type": 2,
+      "hour": 8,
+      "hour_type": 2
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 34,
+    "fields": {
+      "day_type": 2,
+      "hour": 9,
+      "hour_type": 2
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 35,
+    "fields": {
+      "day_type": 2,
+      "hour": 10,
+      "hour_type": 2
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 36,
+    "fields": {
+      "day_type": 2,
+      "hour": 11,
+      "hour_type": 2
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 37,
+    "fields": {
+      "day_type": 2,
+      "hour": 12,
+      "hour_type": 2
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 38,
+    "fields": {
+      "day_type": 2,
+      "hour": 13,
+      "hour_type": 2
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 39,
+    "fields": {
+      "day_type": 2,
+      "hour": 14,
+      "hour_type": 2
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 40,
+    "fields": {
+      "day_type": 2,
+      "hour": 15,
+      "hour_type": 2
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 41,
+    "fields": {
+      "day_type": 2,
+      "hour": 16,
+      "hour_type": 2
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 42,
+    "fields": {
+      "day_type": 2,
+      "hour": 17,
+      "hour_type": 2
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 43,
+    "fields": {
+      "day_type": 2,
+      "hour": 18,
+      "hour_type": 2
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 44,
+    "fields": {
+      "day_type": 2,
+      "hour": 19,
+      "hour_type": 2
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 45,
+    "fields": {
+      "day_type": 2,
+      "hour": 20,
+      "hour_type": 6
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 46,
+    "fields": {
+      "day_type": 2,
+      "hour": 21,
+      "hour_type": 6
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 47,
+    "fields": {
+      "day_type": 2,
+      "hour": 22,
+      "hour_type": 6
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 48,
+    "fields": {
+      "day_type": 2,
+      "hour": 23,
+      "hour_type": 6
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 49,
+    "fields": {
+      "day_type": 3,
+      "hour": 0,
+      "hour_type": 4
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 50,
+    "fields": {
+      "day_type": 3,
+      "hour": 1,
+      "hour_type": 4
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 51,
+    "fields": {
+      "day_type": 3,
+      "hour": 2,
+      "hour_type": 4
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 52,
+    "fields": {
+      "day_type": 3,
+      "hour": 3,
+      "hour_type": 4
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 53,
+    "fields": {
+      "day_type": 3,
+      "hour": 4,
+      "hour_type": 4
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 54,
+    "fields": {
+      "day_type": 3,
+      "hour": 5,
+      "hour_type": 2
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 55,
+    "fields": {
+      "day_type": 3,
+      "hour": 6,
+      "hour_type": 2
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 56,
+    "fields": {
+      "day_type": 3,
+      "hour": 7,
+      "hour_type": 2
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 57,
+    "fields": {
+      "day_type": 3,
+      "hour": 8,
+      "hour_type": 2
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 58,
+    "fields": {
+      "day_type": 3,
+      "hour": 9,
+      "hour_type": 2
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 59,
+    "fields": {
+      "day_type": 3,
+      "hour": 10,
+      "hour_type": 2
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 60,
+    "fields": {
+      "day_type": 3,
+      "hour": 11,
+      "hour_type": 2
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 61,
+    "fields": {
+      "day_type": 3,
+      "hour": 12,
+      "hour_type": 2
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 62,
+    "fields": {
+      "day_type": 3,
+      "hour": 13,
+      "hour_type": 2
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 63,
+    "fields": {
+      "day_type": 3,
+      "hour": 14,
+      "hour_type": 2
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 64,
+    "fields": {
+      "day_type": 3,
+      "hour": 15,
+      "hour_type": 2
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 65,
+    "fields": {
+      "day_type": 3,
+      "hour": 16,
+      "hour_type": 2
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 66,
+    "fields": {
+      "day_type": 3,
+      "hour": 17,
+      "hour_type": 2
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 67,
+    "fields": {
+      "day_type": 3,
+      "hour": 18,
+      "hour_type": 2
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 68,
+    "fields": {
+      "day_type": 3,
+      "hour": 19,
+      "hour_type": 2
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 69,
+    "fields": {
+      "day_type": 3,
+      "hour": 20,
+      "hour_type": 2
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 70,
+    "fields": {
+      "day_type": 3,
+      "hour": 21,
+      "hour_type": 2
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 71,
+    "fields": {
+      "day_type": 3,
+      "hour": 22,
+      "hour_type": 2
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 72,
+    "fields": {
+      "day_type": 3,
+      "hour": 23,
+      "hour_type": 4
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 73,
+    "fields": {
+      "day_type": 4,
+      "hour": 0,
+      "hour_type": 5
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 74,
+    "fields": {
+      "day_type": 4,
+      "hour": 1,
+      "hour_type": 5
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 75,
+    "fields": {
+      "day_type": 4,
+      "hour": 2,
+      "hour_type": 5
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 76,
+    "fields": {
+      "day_type": 4,
+      "hour": 3,
+      "hour_type": 5
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 77,
+    "fields": {
+      "day_type": 4,
+      "hour": 4,
+      "hour_type": 5
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 78,
+    "fields": {
+      "day_type": 4,
+      "hour": 5,
+      "hour_type": 2
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 79,
+    "fields": {
+      "day_type": 4,
+      "hour": 6,
+      "hour_type": 2
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 80,
+    "fields": {
+      "day_type": 4,
+      "hour": 7,
+      "hour_type": 2
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 81,
+    "fields": {
+      "day_type": 4,
+      "hour": 8,
+      "hour_type": 2
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 82,
+    "fields": {
+      "day_type": 4,
+      "hour": 9,
+      "hour_type": 2
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 83,
+    "fields": {
+      "day_type": 4,
+      "hour": 10,
+      "hour_type": 2
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 84,
+    "fields": {
+      "day_type": 4,
+      "hour": 11,
+      "hour_type": 2
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 85,
+    "fields": {
+      "day_type": 4,
+      "hour": 12,
+      "hour_type": 2
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 86,
+    "fields": {
+      "day_type": 4,
+      "hour": 13,
+      "hour_type": 2
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 87,
+    "fields": {
+      "day_type": 4,
+      "hour": 14,
+      "hour_type": 2
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 88,
+    "fields": {
+      "day_type": 4,
+      "hour": 15,
+      "hour_type": 2
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 89,
+    "fields": {
+      "day_type": 4,
+      "hour": 16,
+      "hour_type": 2
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 90,
+    "fields": {
+      "day_type": 4,
+      "hour": 17,
+      "hour_type": 2
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 91,
+    "fields": {
+      "day_type": 4,
+      "hour": 18,
+      "hour_type": 2
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 92,
+    "fields": {
+      "day_type": 4,
+      "hour": 19,
+      "hour_type": 2
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 93,
+    "fields": {
+      "day_type": 4,
+      "hour": 20,
+      "hour_type": 2
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 94,
+    "fields": {
+      "day_type": 4,
+      "hour": 21,
+      "hour_type": 2
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 95,
+    "fields": {
+      "day_type": 4,
+      "hour": 22,
+      "hour_type": 2
+    }
+  },
+  {
+    "model": "scbp_core.hourratetype",
+    "pk": 96,
+    "fields": {
+      "day_type": 4,
+      "hour": 23,
+      "hour_type": 5
+    }
+  }
+]

@@ -1,0 +1,450 @@
+[
+  {
+    "model": "scbp_core.vehiclecolor",
+    "fields": {
+      "title": "Black",
+      "color_abbreviation": "BLK",
+      "color_code": "black"
+    }
+  },
+  {
+    "model": "scbp_core.vehiclecolor",
+    "fields": {
+      "title": "Silver",
+      "color_abbreviation": "SIL",
+      "color_code": "silver"
+    }
+  },
+  {
+    "model": "scbp_core.vehiclecolor",
+    "fields": {
+      "title": "White",
+      "color_abbreviation": "WHT",
+      "color_code": "FFFFFF"
+    }
+  },
+  {
+    "model": "scbp_core.vehiclecolor",
+    "fields": {
+      "title": "Navy",
+      "color_abbreviation": "NAV",
+      "color_code": "navy"
+    }
+  },
+  {
+    "model": "scbp_core.vehiclecolor",
+    "fields": {
+      "title": "Azure",
+      "color_abbreviation": "AZU",
+      "color_code": "Azure"
+    }
+  },
+  {
+    "model": "scbp_core.vehicleclass",
+    "fields": {
+      "is_first_child_seat_free": false,
+      "min_hourly_surcharge_fixed": "0.00",
+      "min_hourly_surcharge_perc": "0.00",
+      "one_way_pickup_rate": "33.00",
+      "one_way_off_peak_pickup_rate": "30.00",
+      "one_way_rate_tier1": "3.20",
+      "one_way_rate_tier2": "1.90",
+      "one_way_rate_tier3": "1.85",
+      "one_way_off_peak_rate_tier1": "3.20",
+      "one_way_off_peak_rate_tier2": "1.95",
+      "one_way_off_peak_rate_tier3": "1.85",
+      "title": "Flexible",
+      "abbreviation": "",
+      "description": "Allows for complimentary upgrade from our fleet",
+      "max_passenger_count": 4,
+      "max_baggage_count": 3,
+      "max_child_seat_count": 2,
+      "image": "CorporateSedanExtraLuggage.jpg",
+      "is_any_class": true,
+      "is_interstate": false,
+      "sort_key": 0,
+      "available_colors": [["BLK"], ["SIL"]]
+    }
+  },
+  {
+    "model": "scbp_core.vehicleclass",
+    "fields": {
+      "is_first_child_seat_free": false,
+      "min_hourly_surcharge_fixed": "44.00",
+      "min_hourly_surcharge_perc": "25.00",
+      "one_way_pickup_rate": "77.00",
+      "one_way_off_peak_pickup_rate": "66.00",
+      "one_way_rate_tier1": "3.50",
+      "one_way_rate_tier2": "2.10",
+      "one_way_rate_tier3": "2.00",
+      "one_way_off_peak_rate_tier1": "3.50",
+      "one_way_off_peak_rate_tier2": "2.10",
+      "one_way_off_peak_rate_tier3": "2.00",
+      "title": "First Class",
+      "abbreviation": "1ST",
+      "description": "BMW 7 Series, Mercedes S Class, Audi A8 or similar",
+      "max_passenger_count": 4,
+      "max_baggage_count": 2,
+      "max_child_seat_count": 1,
+      "image": "first-class.jpg",
+      "is_any_class": false,
+      "is_interstate": false,
+      "sort_key": 3,
+      "available_colors": [["BLK"], ["SIL"]]
+    }
+  },
+  {
+    "model": "scbp_core.vehicleclass",
+    "fields": {
+      "is_first_child_seat_free": true,
+      "min_hourly_surcharge_fixed": "22.00",
+      "min_hourly_surcharge_perc": "10.00",
+      "one_way_pickup_rate": "50.00",
+      "one_way_off_peak_pickup_rate": "45.00",
+      "one_way_rate_tier1": "3.50",
+      "one_way_rate_tier2": "2.10",
+      "one_way_rate_tier3": "1.95",
+      "one_way_off_peak_rate_tier1": "3.50",
+      "one_way_off_peak_rate_tier2": "2.10",
+      "one_way_off_peak_rate_tier3": "1.95",
+      "title": "Family People Mover",
+      "abbreviation": "FPM",
+      "description": "Kia Carnival Platinum or similar",
+      "max_passenger_count": 7,
+      "max_baggage_count": 5,
+      "max_child_seat_count": 3,
+      "image": "family-people-mover.jpg",
+      "is_any_class": false,
+      "is_interstate": false,
+      "sort_key": 4,
+      "available_colors": [["SIL"], ["NAV"]]
+    }
+  },
+  {
+    "model": "scbp_core.vehicleclass",
+    "fields": {
+      "is_first_child_seat_free": false,
+      "min_hourly_surcharge_fixed": "44.00",
+      "min_hourly_surcharge_perc": "25.00",
+      "one_way_pickup_rate": "77.00",
+      "one_way_off_peak_pickup_rate": "66.00",
+      "one_way_rate_tier1": "3.50",
+      "one_way_rate_tier2": "2.20",
+      "one_way_rate_tier3": "2.00",
+      "one_way_off_peak_rate_tier1": "3.50",
+      "one_way_off_peak_rate_tier2": "2.20",
+      "one_way_off_peak_rate_tier3": "2.00",
+      "title": "Luxury People Mover",
+      "abbreviation": "LPM",
+      "description": "Mercedes V Class or similar",
+      "max_passenger_count": 7,
+      "max_baggage_count": 6,
+      "max_child_seat_count": 3,
+      "image": "luxury-people-mover.jpg",
+      "is_any_class": false,
+      "is_interstate": false,
+      "sort_key": 37,
+      "available_colors": [["BLK"], ["SIL"], ["NAV"]]
+    }
+  },
+  {
+    "model": "scbp_core.vehicleclass",
+    "fields": {
+      "is_first_child_seat_free": false,
+      "min_hourly_surcharge_fixed": "11.00",
+      "min_hourly_surcharge_perc": "10.00",
+      "one_way_pickup_rate": "45.00",
+      "one_way_off_peak_pickup_rate": "40.00",
+      "one_way_rate_tier1": "3.50",
+      "one_way_rate_tier2": "2.00",
+      "one_way_rate_tier3": "1.95",
+      "one_way_off_peak_rate_tier1": "3.50",
+      "one_way_off_peak_rate_tier2": "2.00",
+      "one_way_off_peak_rate_tier3": "1.95",
+      "title": "SUV",
+      "abbreviation": "SUV",
+      "description": "Audi Q7, Mazda CX-9 or similar",
+      "max_passenger_count": 4,
+      "max_baggage_count": 4,
+      "max_child_seat_count": 2,
+      "image": "mazda-suv-ratio.jpg",
+      "is_any_class": false,
+      "is_interstate": false,
+      "sort_key": 2,
+      "available_colors": [["BLK"], ["NAV"]]
+    }
+  },
+  {
+    "model": "scbp_core.vehicleclass",
+    "fields": {
+      "is_first_child_seat_free": false,
+      "min_hourly_surcharge_fixed": "22.00",
+      "min_hourly_surcharge_perc": "10.00",
+      "one_way_pickup_rate": "55.00",
+      "one_way_off_peak_pickup_rate": "33.00",
+      "one_way_rate_tier1": "3.00",
+      "one_way_rate_tier2": "2.00",
+      "one_way_rate_tier3": "1.87",
+      "one_way_off_peak_rate_tier1": "3.00",
+      "one_way_off_peak_rate_tier2": "1.75",
+      "one_way_off_peak_rate_tier3": "1.60",
+      "title": "Interstate Sedan",
+      "abbreviation": "IBS",
+      "description": "Holden Caprice or similar",
+      "max_passenger_count": 2,
+      "max_baggage_count": 2,
+      "max_child_seat_count": 1,
+      "image": "CorporateSedan.jpg",
+      "is_any_class": false,
+      "is_interstate": true,
+      "sort_key": 38,
+      "available_colors": [["BLK"]]
+    }
+  },
+  {
+    "model": "scbp_core.vehicleclass",
+    "fields": {
+      "is_first_child_seat_free": false,
+      "min_hourly_surcharge_fixed": "22.00",
+      "min_hourly_surcharge_perc": "10.00",
+      "one_way_pickup_rate": "45.00",
+      "one_way_off_peak_pickup_rate": "40.00",
+      "one_way_rate_tier1": "3.50",
+      "one_way_rate_tier2": "2.00",
+      "one_way_rate_tier3": "1.95",
+      "one_way_off_peak_rate_tier1": "3.50",
+      "one_way_off_peak_rate_tier2": "2.00",
+      "one_way_off_peak_rate_tier3": "1.95",
+      "title": "Business Class",
+      "abbreviation": "BUS",
+      "description": "Mercedes E Class, Genesis Ultimate or similar",
+      "max_passenger_count": 4,
+      "max_baggage_count": 3,
+      "max_child_seat_count": 1,
+      "image": "merc-business-ratio.jpg",
+      "is_any_class": false,
+      "is_interstate": false,
+      "sort_key": 1,
+      "available_colors": [["BLK"], ["SIL"]]
+    }
+  },
+  {
+    "model": "scbp_core.vehicleclass",
+    "fields": {
+      "is_first_child_seat_free": false,
+      "min_hourly_surcharge_fixed": "0.00",
+      "min_hourly_surcharge_perc": "0.00",
+      "one_way_pickup_rate": "33.00",
+      "one_way_off_peak_pickup_rate": "25.00",
+      "one_way_rate_tier1": "3.00",
+      "one_way_rate_tier2": "1.95",
+      "one_way_rate_tier3": "1.75",
+      "one_way_off_peak_rate_tier1": "3.00",
+      "one_way_off_peak_rate_tier2": "1.85",
+      "one_way_off_peak_rate_tier3": "1.65",
+      "title": "Interstate Sedan",
+      "abbreviation": "INS",
+      "description": "A luxury sedan",
+      "max_passenger_count": 4,
+      "max_baggage_count": 3,
+      "max_child_seat_count": 2,
+      "image": "CorporateSedan.jpg",
+      "is_any_class": false,
+      "is_interstate": true,
+      "sort_key": 39,
+      "available_colors": [["BLK"], ["SIL"]]
+    }
+  },
+  {
+    "model": "scbp_core.pricelist",
+    "pk": 147,
+    "fields": {
+      "hourly_initial_fee": "88.00",
+      "hourly_tier1_start_at": 1,
+      "hourly_tier2_start_at": 6,
+      "block_size_minutes": 10,
+      "hourly_tier1_rate_per_block": "12.00",
+      "hourly_tier2_rate_per_block": "10.00",
+      "out_of_area_boundary_km": 30,
+      "interstate_fee": "11.00",
+      "airport_surcharge": "0.00",
+      "government_booking_fee": "1.10",
+      "company_booking_fee": "1.00",
+      "airport_parking_fee": "4.50",
+      "off_peak_discount_percentage": "6.00",
+      "peak_percent": "3.00",
+      "peak_max_amount": "11.00",
+      "out_of_hours_fee": "11.00",
+      "public_holiday_out_of_hours_fee": "16.00",
+      "public_holiday_fee": "11.00",
+      "off_peak_minimum_fee": "35.00",
+      "standard_minimum_fee": "55.00",
+      "saturday_night_minimum_fee": "88.00",
+      "wedding_ribbon_fee": "44.00",
+      "child_seat_fee": "11.00",
+      "additional_stop_fee": "8.00",
+      "color_selection_fee": "33.00",
+      "car_park_pass_fee": "15.00",
+      "rate_schedule_standard": "0.00",
+      "rate_schedule_retail": "10.00",
+      "rate_schedule_corporate": "-5.00",
+      "rate_schedule_institution": "-10.00",
+      "is_current": true,
+      "current_from": "2020-02-28T03:20:45.511Z",
+      "current_until": null,
+      "created_by": null
+    }
+  },
+  {
+    "model": "scbp_core.vehicleclasspricelist",
+    "pk": 931,
+    "fields": {
+      "is_first_child_seat_free": false,
+      "min_hourly_surcharge_fixed": "0.00",
+      "min_hourly_surcharge_perc": "0.00",
+      "one_way_pickup_rate": "33.00",
+      "one_way_off_peak_pickup_rate": "30.00",
+      "one_way_rate_tier1": "3.20",
+      "one_way_rate_tier2": "1.90",
+      "one_way_rate_tier3": "1.85",
+      "one_way_off_peak_rate_tier1": "3.20",
+      "one_way_off_peak_rate_tier2": "1.95",
+      "one_way_off_peak_rate_tier3": "1.85",
+      "price_list": 147,
+      "vehicle_class": [""]
+    }
+  },
+  {
+    "model": "scbp_core.vehicleclasspricelist",
+    "pk": 932,
+    "fields": {
+      "is_first_child_seat_free": false,
+      "min_hourly_surcharge_fixed": "22.00",
+      "min_hourly_surcharge_perc": "10.00",
+      "one_way_pickup_rate": "45.00",
+      "one_way_off_peak_pickup_rate": "40.00",
+      "one_way_rate_tier1": "3.50",
+      "one_way_rate_tier2": "2.00",
+      "one_way_rate_tier3": "1.95",
+      "one_way_off_peak_rate_tier1": "3.50",
+      "one_way_off_peak_rate_tier2": "2.00",
+      "one_way_off_peak_rate_tier3": "1.95",
+      "price_list": 147,
+      "vehicle_class": ["BUS"]
+    }
+  },
+  {
+    "model": "scbp_core.vehicleclasspricelist",
+    "pk": 933,
+    "fields": {
+      "is_first_child_seat_free": false,
+      "min_hourly_surcharge_fixed": "11.00",
+      "min_hourly_surcharge_perc": "10.00",
+      "one_way_pickup_rate": "45.00",
+      "one_way_off_peak_pickup_rate": "40.00",
+      "one_way_rate_tier1": "3.50",
+      "one_way_rate_tier2": "2.00",
+      "one_way_rate_tier3": "1.95",
+      "one_way_off_peak_rate_tier1": "3.50",
+      "one_way_off_peak_rate_tier2": "2.00",
+      "one_way_off_peak_rate_tier3": "1.95",
+      "price_list": 147,
+      "vehicle_class": ["SUV"]
+    }
+  },
+  {
+    "model": "scbp_core.vehicleclasspricelist",
+    "pk": 934,
+    "fields": {
+      "is_first_child_seat_free": false,
+      "min_hourly_surcharge_fixed": "44.00",
+      "min_hourly_surcharge_perc": "25.00",
+      "one_way_pickup_rate": "77.00",
+      "one_way_off_peak_pickup_rate": "66.00",
+      "one_way_rate_tier1": "3.50",
+      "one_way_rate_tier2": "2.10",
+      "one_way_rate_tier3": "2.00",
+      "one_way_off_peak_rate_tier1": "3.50",
+      "one_way_off_peak_rate_tier2": "2.10",
+      "one_way_off_peak_rate_tier3": "2.00",
+      "price_list": 147,
+      "vehicle_class": ["1ST"]
+    }
+  },
+  {
+    "model": "scbp_core.vehicleclasspricelist",
+    "pk": 935,
+    "fields": {
+      "is_first_child_seat_free": true,
+      "min_hourly_surcharge_fixed": "22.00",
+      "min_hourly_surcharge_perc": "10.00",
+      "one_way_pickup_rate": "50.00",
+      "one_way_off_peak_pickup_rate": "45.00",
+      "one_way_rate_tier1": "3.50",
+      "one_way_rate_tier2": "2.10",
+      "one_way_rate_tier3": "1.95",
+      "one_way_off_peak_rate_tier1": "3.50",
+      "one_way_off_peak_rate_tier2": "2.10",
+      "one_way_off_peak_rate_tier3": "1.95",
+      "price_list": 147,
+      "vehicle_class": ["FPM"]
+    }
+  },
+  {
+    "model": "scbp_core.vehicleclasspricelist",
+    "pk": 936,
+    "fields": {
+      "is_first_child_seat_free": false,
+      "min_hourly_surcharge_fixed": "44.00",
+      "min_hourly_surcharge_perc": "25.00",
+      "one_way_pickup_rate": "77.00",
+      "one_way_off_peak_pickup_rate": "66.00",
+      "one_way_rate_tier1": "3.50",
+      "one_way_rate_tier2": "2.20",
+      "one_way_rate_tier3": "2.00",
+      "one_way_off_peak_rate_tier1": "3.50",
+      "one_way_off_peak_rate_tier2": "2.20",
+      "one_way_off_peak_rate_tier3": "2.00",
+      "price_list": 147,
+      "vehicle_class": ["LPM"]
+    }
+  },
+  {
+    "model": "scbp_core.vehicleclasspricelist",
+    "pk": 937,
+    "fields": {
+      "is_first_child_seat_free": false,
+      "min_hourly_surcharge_fixed": "22.00",
+      "min_hourly_surcharge_perc": "10.00",
+      "one_way_pickup_rate": "55.00",
+      "one_way_off_peak_pickup_rate": "33.00",
+      "one_way_rate_tier1": "3.00",
+      "one_way_rate_tier2": "2.00",
+      "one_way_rate_tier3": "1.87",
+      "one_way_off_peak_rate_tier1": "3.00",
+      "one_way_off_peak_rate_tier2": "1.75",
+      "one_way_off_peak_rate_tier3": "1.60",
+      "price_list": 147,
+      "vehicle_class": ["IBS"]
+    }
+  },
+  {
+    "model": "scbp_core.vehicleclasspricelist",
+    "pk": 938,
+    "fields": {
+      "is_first_child_seat_free": false,
+      "min_hourly_surcharge_fixed": "0.00",
+      "min_hourly_surcharge_perc": "0.00",
+      "one_way_pickup_rate": "33.00",
+      "one_way_off_peak_pickup_rate": "25.00",
+      "one_way_rate_tier1": "3.00",
+      "one_way_rate_tier2": "1.95",
+      "one_way_rate_tier3": "1.75",
+      "one_way_off_peak_rate_tier1": "3.00",
+      "one_way_off_peak_rate_tier2": "1.85",
+      "one_way_off_peak_rate_tier3": "1.65",
+      "price_list": 147,
+      "vehicle_class": ["INS"]
+    }
+  }
+]

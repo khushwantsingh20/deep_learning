@@ -1,0 +1,200 @@
+body {
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+.numeric {
+    text-align: right;
+    width: 56px;
+}
+
+.time-column {
+    width: 37px;
+}
+
+.date-column {
+    width: 67px;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    font-family: "Arial Narrow", Arial, sans-serif;
+}
+
+table th,
+table td {
+    text-align: left;
+    font-family: "Arial Narrow", Arial, sans-serif;
+}
+
+table th {
+    font-weight: bold;
+    font-family: "Arial Narrow", Arial, sans-serif;
+}
+
+table.header-table {
+    padding-bottom: 18px;
+}
+
+table.header-table h1 {
+    font-size: 27px;
+}
+
+table.header-table h1,
+table.header-table div {
+    display: inline-block;
+    vertical-align: baseline;
+    white-space: nowrap;
+}
+
+table.header-table div {
+    font-size: 19px;
+}
+
+.header-table > tbody > tr > td:last-child {
+    text-align: right;
+    padding-right: 30px;
+}
+
+div.summary-table-wrap {
+    width: 100%;
+    border-bottom: 1px solid hsl(93, 0%, 70%);
+    border-top: 1px solid hsl(93, 0%, 70%);
+}
+
+table.summary-table {
+    width: 40%;
+    padding-left: 5%;
+    padding-top: 22px;
+    padding-bottom: 22px;
+}
+
+table.summary-table th {
+    text-align: left;
+    width: 40%;
+}
+
+table.invoice-table {
+    border-bottom: 1px solid hsl(93, 0%, 70%);
+    border-collapse: collapse;
+}
+
+table.invoice-table thead th {
+    border-color: hsl(93, 0%, 70%);
+    border-style: solid none;
+    border-bottom-width: 1px;
+    padding: 4px 4px 0;
+    vertical-align: top;
+    background: hsl(204, 24%, 90%);
+    font-size: 16px;
+}
+
+table.invoice-table tr {
+    page-break-inside: avoid !important;
+}
+
+/*
+    Add border to first three and last eight columns
+    They just so happen to use these classes as we can't target with :nth-child
+*/
+
+table.invoice-table thead th.date-column,
+table.invoice-table thead th.numeric,
+table.invoice-table thead th.time-column {
+    border-right: 1px solid hsl(93, 0%, 70%);
+}
+
+
+table.invoice-table thead th:last-child.numeric {
+    border-right: none;
+}
+
+table.invoice-table th {
+    vertical-align: top;
+}
+
+table.invoice-table tbody {
+    page-break-after: always!important;
+}
+
+table.invoice-table tbody td {
+    padding: 4px 4px 0;
+    vertical-align: top;
+}
+
+table.invoice-table tbody .highlight-row td {
+    background-color: #f2f5f7;
+}
+
+table.invoice-table tbody tr:first-child td {
+    padding-top: 12px;
+}
+
+table.invoice-table tbody tr:last-child td {
+    padding-bottom: 12px;
+}
+
+table.invoice-table tfoot {
+    border-top: 1px solid hsl(93, 0%, 70%);
+    display: table-row-group;
+    page-break-inside: avoid !important;
+}
+
+table.invoice-table tfoot > tr > td {
+    padding: 0 !important;
+}
+
+table.invoice-table tfoot tr:first-child th, table.invoice-table tfoot tr:first-child td {
+    padding-top: 15px;
+}
+
+table.invoice-table tfoot tr:last-child th, table.invoice-table tfoot tr:last-child td {
+    padding-bottom: 15px;
+}
+
+table.invoice-table tfoot th {
+    padding-left: 60%;
+}
+
+table.invoice-table tfoot td {
+    width: auto;
+}
+
+table.invoice-table tfoot table td:first-child {
+    padding-right: 10px;
+}
+
+.summary-data {
+    page-break-inside: avoid;
+}
+
+.summary-data h2 {
+   font-size: 20px;
+   page-break-after: avoid;
+}
+
+.summary-data table td {
+    padding: 4px 4px 0;
+}
+
+.summary-data table th {
+    font-weight: normal;
+    min-width: 200px;
+    padding: 4px 0 0;
+}
+
+.summary-data table {
+    width: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.summary-data table .totals th,
+.summary-data table .totals td {
+    font-weight: bold;
+}

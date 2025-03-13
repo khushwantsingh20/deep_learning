@@ -1,0 +1,158 @@
+{% load static %}
+{% load inlinecss %}
+{% load format_currency %}
+{% inlinecss "css/driver_statement.css" %}
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8" />
+  <title>Driver Monthly Statement</title>
+</head>
+<body>
+  <div class="wrapper">
+    <table class="header-table">
+      <tbody>
+      <tr>
+        <td>
+          <table>
+            <tr>
+              <td>
+                <h1>Driver Monthly Statement</h1>
+                <div>&nbsp;{{ statement_period_range }}</div>
+              </td>
+            </tr>
+            <tr>
+              <td>F24 / 58 Mahoneys Road Thomastown VIC 3074</td>
+            </tr>
+            <tr>
+              <td>Tel: 1300 12 5466 Email: admin@mylimomate.com.au</td>
+            </tr>
+            <tr>
+              <td>Southern Cross Cabcredit ABN 86 166 767 077</td>
+            </tr>
+          </table>
+        </td>
+        <td>
+          <img src="{{ logo_path }}" alt="Limomate by Southern Cross" width="160" />
+        </td>
+      </tr>
+      </tbody>
+    </table>
+
+    <div class="summary-table-wrap">
+      <table class="summary-table">
+        <tbody>
+          <tr>
+            <th>Driver Name:</th>
+            <td>{{ driver_name }}</td>
+          </tr>
+          <tr>
+            <th>
+              Driver Number:
+            </th>
+            <td>
+              {{ driver_number }}
+            </td>
+          </tr>
+          <tr>
+            <th>Statement Period:</th>
+            <td>{{ statement_period }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <table class="invoice-table">
+      <thead>
+        <tr>
+          <th class="date-column">Job No.</th>
+          <th class="date-column">Date</th>
+          <th class="time-column">Time</th>
+          <th>Passenger</th>
+          <th>Pickup</th>
+          <th>Destination</th>
+          <th class="numeric">Charge</th>
+          <th class="numeric">Surch.</th>
+          <th class="numeric">Wait</th>
+          <th class="numeric">Req.</th>
+          <th class="numeric">Var.</th>
+          <th class="numeric">Value</th>
+          <th class="numeric">OOP</th>
+          <th class="numeric">Paid</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% if invoices %}
+          {% for invoice in invoices %}
+            <tr {% if forloop.counter|add:"1"|divisibleby:4 or forloop.counter|divisibleby:4 %}class="highlight-row"{% endif %}>
+              <td class="date-column">{{ invoice.booking_number }}</td>
+              <td class="date-column">{{ invoice.booking_date }}</td>
+              <td class="time-column">{{ invoice.booking_time }}</td>
+              <td>{{ invoice.client }}</td>
+              <td>{{ invoice.pickup }}</td>
+              <td>{{ invoice.destination }}</td>
+              <td class="numeric">{{ invoice.travel_charge|format_currency }}</td>
+              <td class="numeric">{{ invoice.time_charge|format_currency }}</td>
+              <td class="numeric">{{ invoice.waiting_charge|format_currency }}</td>
+              <td class="numeric">{{ invoice.requests|format_currency }}</td>
+              <td class="numeric">{{ invoice.variations|format_currency }}</td>
+              <td class="numeric">{{ invoice.job_value|format_currency }}</td>
+              <td class="numeric">{{ invoice.extras|format_currency }}</td>
+              <td class="numeric">
+                {% if invoice.collected %}
+                  {{ invoice.collected|format_currency }}
+                {% else %}
+
+                {% endif %}
+              </td>
+            </tr>
+          {% endfor %}
+        {% else %}
+          <tr>
+            <th colspan="14">No invoices for the given period</th>
+          </tr>
+        {% endif %}
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="15">
+            <table>
+              <tr>
+                <th>Service Fee to be calculated on:</th>
+                <td class="numeric">{{ service_fee_base|format_currency }}</td>
+                <td class="numeric">{{ extras_sum|format_currency }}</td>
+                <td class="numeric">{{ driver_collect_sum|format_currency }}</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+      </tfoot>
+    </table>
+
+    <div class="summary-data">
+      <h2>Summary {{ statement_period }}</h2>
+      <table>
+        <tbody>
+          <tr>
+            <th>Days Worked</th>
+            <td class="numeric">{{ days_worked }}</td>
+          </tr>
+          <tr>
+            <th>Weekend Days</th>
+            <td class="numeric">{{ weekend_days_worked }}</td>
+          </tr>
+          <tr>
+            <th>Bookings Serviced</th>
+            <td class="numeric">{{ booking_count }}</td>
+          </tr>
+          <tr class="totals">
+            <th>Average Day</th>
+            <td class="numeric">${{ daily_average_revenue|floatformat:"0" }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+{% endinlinecss %}

@@ -1,0 +1,243 @@
+{% load static %}
+{% load format_currency %}
+{% load inlinecss %}
+{% inlinecss "css/invoice.css" %}
+  <!DOCTYPE html>
+  <html lang="en-AU">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{{ header }}</title>
+  </head>
+  <body>
+  <div class="wrapper">
+    <table class="header-table">
+      <tbody>
+      <tr>
+        <td>
+          <table>
+            <tr>
+              <td><h1>{{ header }}</h1></td>
+            </tr>
+            <tr>
+              <td>
+                Southern Cross Cabcredit<br />
+                The Trustee for the VHB Trust<br />
+                ABN 12 616 753 422
+                </td>
+            </tr>
+            <tr>
+              <td>F24 / 58 Mahoneys Road Thomastown VIC 3074</td>
+            </tr>
+            <tr>
+              <td>Tel: 1300 12 5466 Email: admin@mylimomate.com.au</td>
+            </tr>
+          </table>
+        </td>
+        <td>
+          <img src="{{ logo_path }}" alt="Limomate by Southern Cross" width="160" />
+        </td>
+      </tr>
+      </tbody>
+    </table>
+
+    <table class="summary-table-wrap">
+      <tbody>
+        <tr>
+          <td width="65%">
+            <table>
+              <tr>
+                <td>
+                  {{ account_contact_name }}<br />
+                  {{ account_email }}
+                </td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td>
+                  {{ account_name }}<br />
+                  {{ account_address|linebreaksbr }}
+                </td>
+              </tr>
+            </table>
+          </td>
+          <td>
+            <table>
+              <tr>
+                <th>Issue Date:</th>
+                <td><strong>{{ invoice_issue_date }}</strong></td>
+              </tr>
+              <tr>
+                <th>
+                  {% if is_statement %}
+                    Statement Period:
+                  {% else %}
+                    Invoice Number:
+                  {% endif %}
+                </th>
+                <td>
+                  {% if is_statement %}
+                    {{ statement_period }}
+                  {% else %}
+                    {{ invoice }}
+                  {% endif %}
+                </td>
+              </tr>
+              <tr>
+                <th>Account Number:</th>
+                <td>{{ account_number }}</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table class="data-table">
+      <thead>
+      <tr>
+        {% if is_statement %}
+          <th>Inv. No.</th>
+        {% endif %}
+        <th>Date</th>
+        <th>Job. No.</th>
+        <th class="col-60">Ref No.</th>
+        <th>Passenger</th>
+        <th>Car<br />Type</th>
+        <th>From</th>
+        <th>To</th>
+        <th class="align-right">Time</th>
+        <th class="align-right">Pick<br />Up</th>
+        <th class="align-right">Total<br />Time</th>
+        <th class="align-right">Transfer<br />Rate</th>
+        <th class="align-right">Time<br />Surch.</th>
+        <th class="align-right">Wait</th>
+        <th class="align-right">Varia-<br />tion</th>
+        <th class="align-right">Other<br />Exp.</th>
+        <th class="align-right">Extras</th>
+        <th class="align-right">Govt.<br />Levy</th>
+        <th class="align-right">Paid to<br />Driver</th>
+        <th class="align-right">Total<br />Charge</th>
+      </tr>
+      </thead>
+      <tbody>
+      {% for item in invoice_items %}
+        <tr {% if forloop.counter|add:"1"|divisibleby:4 or forloop.counter|divisibleby:4 %}class="highlight-row"{% endif %}>
+          {% if is_statement %}
+            <td>{{ item.invoice_number }}</td>
+          {% endif %}
+          <td>{{ item.booking_date }}</td>
+          <td>{{ item.booking_number }}</td>
+          <td class="col-60"><span>{{ item.reference_number }}</span></td>
+          <td>{{ item.passenger }}</td>
+          <td>{{ item.car_type }}</td>
+          <td>
+            {{ item.pickup }}
+            {% if item.additional_stops %}
+              {% for stop in item.additional_stops %}
+                <div>{{ stop }}</div>
+              {% endfor %}
+            {% endif %}
+            {% if item.ad_hoc_additional_stops %}
+              {% for stop in item.ad_hoc_additional_stops %}
+                <div>{{ stop }}</div>
+              {% endfor %}
+            {% endif %}
+          </td>
+          <td>{{ item.destination }}</td>
+          <td class="align-right">{{ item.booking_time }}</td>
+          <td class="align-right">{{ item.pickup_time }}</td>
+          <td class="align-right">{{ item.total_time }}</td>
+          <td class="align-right">{{ item.travel_charge|format_currency }}</td>
+          <td class="align-right">{{ item.time_surcharge|format_currency }}</td>
+          <td class="align-right">{{ item.waiting_charge|format_currency }}</td>
+          <td class="align-right">{{ item.variation_charge|format_currency }}</td>
+          <td class="align-right">{{ item.out_of_pocket_charge|format_currency }}</td>
+          <td class="align-right">{{ item.requests|format_currency }}</td>
+          <td class="align-right">{{ item.booking_fee|format_currency }}</td>
+          <td class="align-right">
+            {% if item.paid_to_driver > 0 %}
+              {{ item.paid_to_driver|format_currency }}
+            {% else %}
+              -
+            {% endif %}
+          </td>
+          <td class="align-right">{{ item.total_charge|format_currency }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+
+    <table class="footer-table">
+      <tbody>
+      <tr>
+        <td class="message-column">
+          {% if custom_message %}
+            <p class="custom-message">
+              {{ custom_message }}
+            </p>
+          {% endif %}
+          {% if not credit_card_surcharge %}
+            <table class="bank-details-table">
+              <tr>
+                <td colspan="2">&nbsp;</td>
+              </tr>
+              <tr>
+                <th>Bank Details:</th>
+                <td>Southern Cross Cabcredit Pty Ltd</td>
+              </tr>
+              <tr>
+                <th>BSB:</th>
+                <td>013 423</td>
+              </tr>
+              <tr>
+                <th>Account Number:</th>
+                <td>213 989 238</td>
+              </tr>
+              <tr>
+                <td colspan="2">&nbsp;</td>
+              </tr>
+            </table>
+          {% endif %}
+          <div class="payment-message">
+            {% if credit_card_surcharge %}
+              Invoice has been charged to your registered credit card - thank you.
+            {% elif is_statement %}
+              Payment Terms: 30 Days from Issue Date
+            {% endif %}
+          </div>
+        </td>
+        <td class="total-column">
+          <table class="totals-table">
+            <tr>
+              <td>Sub-total ex. GST</td>
+              <td>${{ ex_tax_total|floatformat:2 }}</td>
+            </tr>
+            <tr>
+              <td>GST</td>
+              <td>${{ tax_total|floatformat:2 }}</td>
+            </tr>
+            {% if credit_card_surcharge %}
+              <tr>
+                <td>&nbsp;</td>
+                <td>{{ total_minus_credit_card_surcharge|format_currency }}</td>
+              </tr>
+              <tr>
+                <td>CC Surcharge ({{ credit_card_surcharge_rate }}%)</td>
+                <td>${{ credit_card_surcharge|floatformat:2 }}</td>
+              </tr>
+            {% endif %}
+            <tr class="total-row">
+              <td>Total Charge inc. GST</td>
+              <td>${{ invoice_total|floatformat:2 }}</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  </body>
+  </html>
+{% endinlinecss %}

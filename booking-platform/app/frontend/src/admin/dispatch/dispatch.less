@@ -1,0 +1,549 @@
+@import (reference) '../../styles/defs/_variables';
+
+@interstate-color: #ffd9d9;
+@tba-color: #dee1fd;
+@out-of-area-color: #ffe9d9;
+@hold-color: #7ed0ff;
+@request-color: #d9f6da;
+@normal-color: #ffffff;
+@normal-highlight-color: #ecf9ff;
+
+@background-normal-opacity: 45%;
+@background-hover-opacity: 95%;
+
+@dispatch-page-header-height: 49px;
+@dispatch-detail-column-width: 400px;
+@dispatch-list-font-size: 14px;
+@dispatch-filter-font-size: 13px;
+@dispatch-list-form-width: 70px;
+
+/* Global styles required to make the dispatch page look right */
+:global {
+  .dispatch.hasSider .main {
+    margin: 0;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dispatch .ant-form-item {
+    margin-bottom: 0;
+  }
+}
+
+.dispatchWrapper {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  display: flex;
+  flex: 1;
+}
+
+/* Filter form */
+.filterForm {
+  margin-bottom: @padding-sm;
+
+  fieldset {
+    overflow: hidden;
+  }
+
+  legend {
+    float: left;
+    margin-right: 30px;
+    width: auto;
+    margin-bottom: 0;
+    line-height: 2;
+    font-size: @dispatch-filter-font-size;
+    padding-top: 6px;
+
+    + div {
+      display: flex;
+
+      > div:last-child {
+        margin-left: auto;
+      }
+    }
+  }
+}
+
+.listFilterGridComponent {
+  width: 100%;
+}
+
+.dateRangeFilterField {
+  width: 100%;
+
+  :global {
+    .ant-form-item {
+      display: flex;
+      align-items: center;
+
+      .ant-col {
+        flex: 1;
+      }
+
+      .ant-form-item-label {
+        flex-grow: 0;
+      }
+    }
+  }
+}
+
+.dateRangeFilter {
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  button {
+    flex: 0 1 25px;
+    color: white;
+    background-color: @primary-color;
+  }
+
+  > div {
+    flex: 1;
+
+    > div {
+      padding-top: 0;
+    }
+
+    :global(.ant-calendar-picker) {
+      display: block;
+    }
+  }
+}
+
+.listFilterCheckboxLabel {
+  padding-right: 4px;
+}
+
+.filterRhsItems {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.statusFilterButton,
+.statusFilterButton:hover,
+.statusFilterButton:active,
+.statusFilterButton:focus {
+  padding: 4px 8px;
+  color: #000;
+  border-color: @border-color-base;
+  outline: none;
+}
+
+.statusFilterActive,
+.statusFilterActive:hover,
+.statusFilterActive:active,
+.statusFilterActive:focus {
+  color: white;
+  background-color: @primary-color;
+  outline: none;
+}
+
+.bookingCounts {
+  font-size: @dispatch-filter-font-size;
+  display: inline-flex;
+  margin-right: 10px;
+}
+
+/* Dispatch table */
+.dispatchTableWrapper {
+  height: calc(100vh - 185px);
+  font-family: 'Arial Narrow', Arial, sans-serif;
+
+  :global .ReactVirtualized__Table__headerColumn {
+    padding-right: 3px;
+  }
+
+  :global .ReactVirtualized__Table__headerRow {
+    text-transform: none;
+  }
+
+  :global .ReactVirtualized__Table__sortableHeaderIcon {
+    font-size: 20px;
+  }
+
+  :global .ant-empty {
+    text-align: center;
+  }
+}
+
+.optionColumn {
+  white-space: pre-wrap;
+}
+
+.alignRight {
+  text-align: right;
+}
+
+.selectedRow {
+  &,
+  &:focus {
+    outline: none;
+  }
+}
+
+.interstateRow& {
+  background-color: fade(@interstate-color, @background-normal-opacity);
+}
+
+.tbaRow& {
+  background-color: fade(@tba-color, @background-normal-opacity);
+}
+
+.outOfAreaRow& {
+  background-color: fade(@out-of-area-color, @background-normal-opacity);
+}
+
+.holdRow& {
+  background-color: fade(@hold-color, @background-normal-opacity);
+}
+
+.requestRow& {
+  background-color: fade(@request-color, @background-normal-opacity);
+}
+
+.normalRow& {
+  background-color: fade(#fff, @background-normal-opacity);
+}
+
+:hover:not(.selectedRow),
+.selectedRow {
+  .interstateRow& {
+    background-color: fade(@interstate-color, @background-hover-opacity);
+  }
+
+  .tbaRow& {
+    background-color: fade(@tba-color, @background-hover-opacity);
+  }
+
+  .outOfAreaRow& {
+    background-color: fade(@out-of-area-color, @background-hover-opacity);
+  }
+
+  .holdRow& {
+    background-color: fade(@hold-color, @background-hover-opacity);
+  }
+
+  .requestRow& {
+    background-color: fade(@request-color, @background-hover-opacity);
+  }
+
+  .normalRow& {
+    background-color: fade(@normal-highlight-color, @background-hover-opacity);
+  }
+}
+.selectedRow {
+  font-weight: 600;
+}
+
+/* Styling for table/detail split */
+.dispatchListColumn {
+  padding: 5px 0 0 0;
+  flex: 3;
+  position: relative;
+  max-width: calc(100vw - @dispatch-detail-column-width - 276px);
+  font-size: @dispatch-list-font-size;
+}
+
+.menuCollapsed {
+  max-width: calc(100vw - @dispatch-detail-column-width - 130px);
+}
+
+.dispatchDetailColumn {
+  flex: 0 1 @dispatch-detail-column-width;
+  width: @dispatch-detail-column-width;
+  border-left: 1px solid @border-color-dark;
+  border-right: 1px solid @border-color-dark;
+  position: fixed;
+  right: 0;
+  height: calc(100vh - @dispatch-page-header-height);
+  overflow-y: scroll;
+  background-color: white;
+}
+
+.bookingDetails {
+  padding: @padding-sm;
+}
+
+.detailSection {
+  padding: 6px 0;
+  font-family: 'Arial Narrow', Arial, sans-serif;
+
+  + .detailSection {
+    border-top: 1px solid @border-color-base;
+  }
+
+  .detailTimeWrapper {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.detailSectionHeader {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.detailSectionRow {
+  display: flex;
+  font-size: 14px;
+  padding: 2px 0;
+
+  &:nth-child(odd) {
+    background-color: #ececec;
+  }
+
+  :global(.ant-form-item-control) {
+    line-height: 26px;
+  }
+
+  .detailSectionLabel {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  .detailSectionValue {
+    font-size: 14px;
+    line-height: 21px;
+  }
+}
+
+/* Dispatch table form fields */
+.dispatchFormField {
+  width: 100%;
+  height: 100%;
+
+  :global .ant-form-item {
+    margin-bottom: 0;
+  }
+
+  :global .ant-input-number {
+    font-size: @dispatch-list-font-size;
+    width: @dispatch-list-form-width;
+  }
+
+  :global .ant-input {
+    font-size: @dispatch-list-font-size;
+    width: @dispatch-list-form-width;
+    padding: 1px 5px;
+  }
+
+  .dispatchFormFieldNarrow {
+    width: 5ch;
+  }
+
+  :global {
+    .ant-input-group {
+      .ant-input {
+        width: 100%;
+        min-width: 70px;
+      }
+
+      .ant-input-group-addon {
+        padding: 0;
+        border-radius: 0;
+
+        .ant-btn {
+          margin: -1px;
+          border-radius: 0;
+          height: 24px;
+          padding: 0 3px;
+
+          .anticon {
+            font-size: 9px;
+          }
+        }
+      }
+    }
+    .ant-input-number-handler-wrap {
+      display: none;
+    }
+    input {
+      text-align: right;
+    }
+  }
+}
+
+.dispatchFormFieldToggle {
+  align-items: center;
+  display: flex;
+  height: 97%;
+  margin-top: 1%;
+  border: 1px dotted rgba(0, 0, 0, 0.3);
+
+  span {
+    margin-left: auto;
+  }
+
+  i {
+    margin-left: 8px;
+    padding-right: 8px;
+  }
+
+  &:hover {
+    box-shadow: inset 0 0 200px 200px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+}
+
+.dispatchFormFieldValue {
+  margin-right: 5px;
+}
+
+.dispatchFormFieldNarrow {
+  width: 5ch;
+}
+
+/* Detail styles */
+
+.dispatchDetailAdditionalStop {
+  margin-bottom: 0;
+}
+
+.request,
+.requestRow .bookingNumber {
+  background-color: @request-color;
+}
+
+.interstate,
+.interstateRow .bookingNumber {
+  background-color: @interstate-color;
+}
+
+.tba,
+.tbaRow .bookingNumber {
+  background-color: @tba-color;
+}
+
+.outOfArea,
+.outOfAreaRow .bookingNumber {
+  background-color: @out-of-area-color;
+}
+
+.hold,
+.holdRow .bookingNumber {
+  background-color: @hold-color;
+}
+
+.normal {
+  background-color: @normal-color;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.4);
+}
+
+.bookingDetailNumber {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 50px;
+  font-weight: 600;
+  margin-right: 9px;
+  position: relative;
+  top: 1px;
+}
+
+.statusCountResults {
+  font-size: 14px;
+  margin-bottom: @padding-lg;
+
+  > span:first-child {
+    margin-right: 30px;
+    font-weight: 600;
+  }
+
+  .bookingDetailNumber {
+    font-weight: 400;
+    padding: 4px 8px;
+    margin-right: 6px;
+  }
+}
+
+.dispatchDetailTimeSection {
+  width: 100%;
+
+  .detailSectionLabel {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  .detailSectionRow {
+    background-color: transparent;
+  }
+
+  tr {
+    background-color: #ececec;
+  }
+
+  tr:nth-child(odd) {
+    background-color: white;
+  }
+}
+
+.dispatchDetailAdditionalStopCount {
+  font-weight: bold;
+  margin-right: 4px;
+}
+
+.dispatchAdditionalStopList {
+  margin-bottom: 0;
+}
+
+/* Price Variation/Out of Pocket related components */
+.adjustmentValueRow {
+  text-align: right;
+
+  .adjustmentAddButton {
+    height: inherit;
+    margin-right: 1rem;
+  }
+
+  & > .adjustmentValueTotal {
+    text-align: right;
+  }
+}
+
+.bookingLink {
+  margin-left: 8px;
+}
+
+.confirmationLink {
+  margin-left: 25px;
+  font-weight: normal;
+}
+
+.dispatchTimeInput,
+.totalTimeInput {
+  width: 60px;
+}
+
+.totalTime {
+  display: block;
+  max-width: 60px;
+  padding-right: 12px;
+  font-size: 14px;
+  text-align: right;
+}
+
+.unverifiedCount {
+  display: inline-flex;
+  width: 25px;
+  height: 20px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  background: #53c31b;
+  color: @brand-mid;
+}
+
+.bookingPriorityTag {
+  display: inline-flex;
+  width: 25px;
+  height: 20px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+}

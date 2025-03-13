@@ -1,0 +1,162 @@
+@import (reference) '../../styles/defs/_variables';
+
+.largeNumberField {
+  :global(.ant-input-number) {
+    width: 100%;
+  }
+  :global(.ant-input-number-handler-wrap) {
+    display: none;
+  }
+}
+
+.intensity {
+  tbody tr:nth-child(4n - 2) td,
+  tbody tr:nth-child(4n - 3) td {
+    background-color: @background-color-base;
+  }
+
+  td {
+    padding: 6px 10px !important;
+    text-align: right;
+    min-width: 40px;
+
+    &:first-child {
+      text-align: center;
+    }
+  }
+
+  th {
+    text-align: center;
+
+    &:not(:first-child) {
+      border-left: 1px solid lighten(@brand-heavy, 10);
+    }
+  }
+
+  td + td {
+    border-left: 1px dashed lighten(@border-color-base, 10);
+  }
+
+  :global {
+    .ant-table {
+      width: 100%;
+    }
+
+    .ant-table-thead > tr > th {
+      text-align: center;
+      background-color: @brand-heavy;
+      color: #fff;
+    }
+  }
+
+  .percentageColumn {
+    text-align: right;
+  }
+
+  .total {
+    background-color: darken(@background-color-base, 3) !important;
+    font-weight: 600;
+
+    &:last-child {
+      text-align: right;
+    }
+  }
+
+  .highlight {
+    background-color: @brand-darker !important;
+    color: #fff !important;
+  }
+}
+
+.body {
+  margin-top: 20px;
+  max-width: 1600px;
+  display: grid;
+  grid-template-columns: 70% 30%;
+
+  > div {
+    display: flex;
+
+    > table {
+      flex: 1;
+    }
+  }
+}
+
+.sideBar {
+  width: 100%;
+  font-weight: 600;
+  padding: 5px 50px;
+  margin-left: 60px;
+  border-left: 1px solid @border-color-dark;
+
+  :global(.ant-btn-lg) {
+    font-size: 14px;
+  }
+
+  .currentDate {
+    margin-bottom: 24px;
+    font-size: 18px;
+  }
+
+  .currentCalendarDate {
+    margin-bottom: 3px;
+  }
+
+  .currentTime {
+    color: @brand-heavy;
+  }
+
+  .bookingsToday {
+    margin: 20px 0 10px;
+    font-size: 15px;
+
+    span {
+      font-size: 18px;
+      color: @brand;
+      display: inline-block;
+      line-height: 18px;
+    }
+  }
+
+  legend {
+    font-size: 16px;
+  }
+
+  .carsAvailable {
+    label {
+      min-width: 60px;
+      display: inline-block;
+      margin-right: 10px;
+      text-align: left;
+    }
+
+    input {
+      max-width: 60px;
+      display: inline-block;
+      text-align: right;
+    }
+
+    :global(.ant-form-item) {
+      text-align: left;
+    }
+  }
+}
+
+.dateFilter {
+  margin: 20px 0;
+
+  label {
+    display: block;
+    margin-bottom: 8px;
+  }
+}
+
+.toggleType {
+  margin: 30px 0;
+}
+
+.refresh {
+  margin-top: 50px;
+  margin-bottom: @padding-lg;
+}

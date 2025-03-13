@@ -1,0 +1,200 @@
+/*
+WARNING: TEXT WILL BE SMALLER IN DEV
+(staging/production has approx. 3/4 the canvas size of MacOS dev)
+ */
+body {
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+}
+
+table td {
+    text-align: left;
+}
+
+table th {
+    font-weight: bold;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: bold;
+}
+
+.data-table {
+    border-collapse: collapse;
+    font-size: 16px;
+    border-bottom: 1px solid hsl(93, 0%, 70%);
+    margin-bottom: 18px;
+}
+
+
+.data-table tbody tr:first-child td {
+    padding-top: 8px;
+}
+
+.data-table tbody tr:last-child td {
+    padding-bottom: 8px;
+}
+
+.data-table td {
+    padding: 0 2px;
+    text-align: left;
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.2;
+    vertical-align: top;
+}
+
+.data-table th {
+    border-color: hsl(93, 0%, 70%);
+    border-style: solid none;
+    border-width: 1px;
+    padding: 10px 2px;
+    text-align: left;
+    vertical-align: top;
+    font-family: "Arial Narrow", Arial, sans-serif;
+    line-height: 1.1;
+}
+
+.data-table th:first-child,
+.data-table td:first-child {
+    padding-left: 5px;
+}
+
+table.data-table tbody .highlight-row td {
+    background-color: #f2f5f7;
+}
+
+.data-table .align-right {
+    text-align: right;
+}
+
+.data-table .align-left {
+    text-align: left;
+}
+
+.col-45 {
+    width: 45px;
+}
+
+.col-60 {
+    width: 60px;
+}
+
+.col-60 > span {
+    word-wrap: break-word;
+    display: block;
+    width: 45px;
+}
+
+.summary-table-wrap {
+    border-top: 1px solid hsl(93, 0%, 70%);
+}
+
+.summary-table-wrap > tbody > tr > td {
+    padding: 0;
+    vertical-align: top;
+}
+
+.summary-table-wrap > tbody > tr > td > table > tr > th {
+    width: 105px;
+}
+
+.summary-table-wrap table td {
+    font-weight: 400;
+    font-size: 16px;
+    vertical-align: middle;
+    padding: 4px 0 0;
+}
+
+.summary-table-wrap table th {
+    font-weight: bold;
+    font-size: 16px;
+    min-width: 125px;
+    padding: 4px 0 0;
+}
+
+.header-table {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.header-table h1 {
+    font-size: 18px;
+    margin-bottom: 18px;
+}
+
+.header-table > tbody > tr > td {
+    padding: 5px 0;
+}
+
+.header-table > tbody > tr > td:last-child {
+    text-align: right;
+    padding-right: 30px;
+    padding-top: 20px;
+}
+
+.footer-table {
+    border-bottom: 1px solid hsl(93, 0%, 70%);
+}
+
+.footer-table > tbody > tr > td {
+    vertical-align: top;
+}
+
+.footer-table td.message-column {
+    position: relative;
+    width: 100%;
+}
+
+.footer-table td.total-column {
+    vertical-align: bottom;
+}
+
+.totals-table {
+    width: 350px;
+}
+
+.totals-table td {
+    padding: 4px 4px 0;
+}
+
+.totals-table td:last-child {
+    text-align: right;
+}
+
+.total-row td {
+    font-weight: bold;
+}
+
+.custom-message {
+    font-style: italic;
+    width: 50%;
+}
+
+.payment-message {
+    bottom: 2px;
+    font-style: italic;
+    font-weight: 500;
+    position: absolute;
+    width: 100%;
+    color: #1b64a1;
+    font-size: 19px;
+}
+
+.bank-details-table {
+    width: 350px;
+}

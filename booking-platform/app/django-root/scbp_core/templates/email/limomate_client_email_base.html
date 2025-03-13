@@ -1,0 +1,74 @@
+{% load static %}
+{% load inlinecss %}
+{% inlinecss "css/email.css" %}
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>{% block title %}Limomate{% endblock title %}</title>
+    <link href="//fonts.googleapis.com/css?family=Montserrat:400,400i,500,600,600i,700&display=swap">
+  </head>
+  <body class="">
+    <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="body">
+      <tr>
+        <td>&nbsp;</td>
+        <td class="container">
+          <div class="content">
+
+            <!-- START CENTERED WHITE CONTAINER -->
+            <table role="presentation" class="main">
+              <tr>
+                <td class="banner">
+                  <table border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td class="brand">
+                          <img src="{{ domain }}{% static 'limomate-logo-horizontal-white.png' %}" alt="Limomate by Southern Cross" width="140" />
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+
+              <!-- START MAIN CONTENT AREA -->
+              <tr>
+                <td class="wrapper">
+                  <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td><h1>{% block header %}{% endblock header %}</h1></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        {% block emailcontent %}{% endblock emailcontent %}
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+
+            <!-- END MAIN CONTENT AREA -->
+            </table>
+            <!-- END CENTERED WHITE CONTAINER -->
+
+            <!-- START FOOTER -->
+            <div class="footer">
+              <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td class="content-block">
+                    <div class="apple-link">
+                      Southern Cross Cabcredit Pty Ltd F24/58 Mahoneys Road, Thomastown VIC, 3074 ABN 24 693 917 564
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <!-- END FOOTER -->
+
+          </div>
+        </td>
+        <td>&nbsp;</td>
+      </tr>
+    </table>
+  </body>
+</html>
+{% endinlinecss %}

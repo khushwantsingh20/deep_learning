@@ -1,0 +1,27 @@
+{% extends './limomate_client_email_base.html' %}
+
+{% block title %}Limomate booking cancelled{% endblock title %}
+
+{% block header %}Your booking has been cancelled{% endblock header %}
+
+{% block emailcontent %}
+  <p>
+    Dear {% if title %}{{ title }} {{ last_name }}{% else %}{{ first_name }} {{ last_name }}{% endif %},
+  </p>
+
+  <p>Your booking has been cancelled.</p>
+
+  <p>Your booking for<br/>
+  <strong>Day:</strong> {{ day }}<br/>
+  <strong>Date:</strong> {{ date }}<br/>
+  <strong>Time:</strong> {{ time }}<br/>
+  <strong>Booking number:</strong> {{ booking_number }}<br/>
+  has been cancelled</p>
+
+  <p>Should you wish to discuss, please feel welcome to call.</p>
+
+  <p>Kind Regards,<br />
+    Limomate by Southern Cross</p>
+
+  <p>For changes and cancellations, please contact 1300 12 LIMO or bookings@mylimomate.com.au</p>
+{% endblock emailcontent %}

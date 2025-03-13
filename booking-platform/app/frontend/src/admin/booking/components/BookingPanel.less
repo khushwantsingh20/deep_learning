@@ -1,0 +1,33 @@
+@import (reference) '../../../styles/defs/_variables';
+
+.panel {
+  display: flex;
+  border-bottom: 1px solid @border-color-dark;
+  padding: 10px 0;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.label {
+  width: 110px;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.body {
+  flex-grow: 1;
+
+  :global(.ant-form-item) {
+    padding-bottom: 0;
+    margin-bottom: 5px;
+  }
+
+  :global(.ant-row + .ant-row) {
+    margin-top: 2px;
+  }
+  :global(.ant-form-item-label) {
+    padding-bottom: 3px;
+  }
+}

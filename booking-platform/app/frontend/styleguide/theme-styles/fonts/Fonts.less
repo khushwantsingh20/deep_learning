@@ -1,0 +1,70 @@
+@import "../../../src/styles/defs/_variables";
+
+.fontVariables {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    display: block;
+    margin: 0 0 10px;
+    font-weight: 700;
+
+    &::after {
+      display: block;
+      font-weight: 400;
+      content: '';
+    }
+
+    &:nth-child(1) {
+      &::after {
+        content: "@{font-family}";
+      }
+    }
+    &:nth-child(2) {
+      &::after {
+        content: "@{code-family}";
+      }
+    }
+    &:nth-child(3) {
+      &::after {
+        content: '@{font-size-base}';
+      }
+    }
+    &:nth-child(4) {
+      &::after {
+        content: '@{font-size-lg}';
+      }
+    }
+    &:nth-child(5) {
+      &::after {
+        content: '@{font-size-sm}';
+      }
+    }
+    &:nth-child(6) {
+      &::after {
+        content: '@{heading-1-size}';
+      }
+    }
+    &:nth-child(7) {
+      &::after {
+        content: '@{heading-2-size}';
+      }
+    }
+    &:nth-child(8) {
+      &::after {
+        content: '@{heading-3-size}';
+      }
+    }
+    &:nth-child(9) {
+      &::after {
+        content: '@{heading-4-size}';
+      }
+    }
+    &:nth-child(10) {
+      &::after {
+        content: '@{line-height-base}';
+      }
+    }
+  }
+}

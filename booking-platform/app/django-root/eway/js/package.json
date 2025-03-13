@@ -1,0 +1,9 @@
+{
+  "name": "@alliance-software/eway",
+  "version": "0.0.0",
+  "description": "Eway",
+  "private": true,
+  "main": "index.js",
+  "devDependencies": {},
+  "dependencies": {}
+}

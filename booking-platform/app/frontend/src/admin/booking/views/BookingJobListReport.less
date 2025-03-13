@@ -1,0 +1,75 @@
+.printStyles {
+  @media print {
+    color-adjust: exact !important;
+    :global(.ant-pagination),
+    :global(.ant-layout-sider),
+    :global(.ant-drawer),
+    :global(.ant-form),
+    :global(.layoutPageHeader),
+    nav {
+      display: none;
+    }
+    :global {
+      .ant-table-thead > tr > th {
+        font-size: 12pt;
+      }
+
+      .ant-table-tbody > tr > td {
+        font-size: 11pt;
+
+        // pickup and destination
+        &:nth-child(5),
+        &:nth-child(6) {
+          width: 240px;
+        }
+      }
+    }
+
+    :global(.main) {
+      background: #fff;
+    }
+  }
+}
+
+.jobListing {
+  composes: printStyles;
+  :global(.ant-pagination) {
+    li {
+      display: none;
+
+      &:global(.ant-pagination-total-text) {
+        display: block;
+      }
+    }
+  }
+
+  :global {
+    .ant-table-wrapper {
+      font-family: 'Arial Narrow', Arial, sans-serif;
+
+      .anticon svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    .ant-table-thead > tr > th {
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .ant-table-tbody > tr > td {
+      font-size: 15px;
+    }
+
+    .ant-table-thead > tr > th,
+    .ant-table-tbody > tr > td {
+      padding: 3px 6px 0;
+      vertical-align: top;
+    }
+  }
+}
+
+.rowNumber {
+  width: 40px;
+}

@@ -1,0 +1,61 @@
+@import (reference) '../../styles/defs/_variables';
+@import (reference) '../../styles/defs/_mixins';
+
+.appLinks {
+  margin-top: 30px;
+
+  > * + * {
+    margin-left: 10px;
+  }
+}
+
+.section {
+  background: #f1f2f2;
+
+  .container {
+    .container();
+
+    @media (min-width: @screen-lg) {
+      display: grid;
+      grid-template-rows: 110px auto 110px;
+      grid-template-columns: 8.33333333% 30% 54% auto;
+    }
+  }
+
+  &Content {
+    grid-row: ~'2 / 3';
+    grid-column-start: 2;
+  }
+
+  &Image {
+    grid-row: ~'1/4';
+    grid-column-start: 3;
+
+    img {
+      position: relative;
+
+      @media (min-width: @screen-lg) {
+        max-width: 800px;
+        margin: 50px 0 -100px -150px;
+      }
+    }
+  }
+
+  &Ba {
+    background: #fff;
+    margin-top: @padding-lg * 2;
+
+    @media (max-width: @screen-xs) {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    @media (min-width: @screen-lg) {
+      .sectionImage {
+        img {
+          margin: -20px 0 -30px -150px;
+        }
+      }
+    }
+  }
+}

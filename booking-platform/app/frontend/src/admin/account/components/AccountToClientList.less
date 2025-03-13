@@ -1,0 +1,31 @@
+@import (reference) '../../../styles/defs/_variables.less';
+
+.accountRow,
+.rowHeader {
+  display: flex;
+  max-width: 1600px;
+  padding: 0 15px;
+}
+
+.client {
+  flex: 3;
+}
+
+.permission {
+  flex: 1;
+}
+
+.action {
+  flex: 1;
+}
+
+.rowHeader {
+  padding: 15px;
+  background: @background-color-light;
+  margin-bottom: @padding-md;
+
+  > div {
+    font-weight: 600;
+    color: @secondary-color;
+  }
+}

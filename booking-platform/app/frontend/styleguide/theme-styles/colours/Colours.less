@@ -1,0 +1,380 @@
+@import '../../../src/styles/defs/_variables';
+
+.colorBlock {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  margin: 1rem 0;
+  padding: 0;
+  grid-gap: 10px;
+
+  li {
+    display: block;
+    height: 150px;
+    position: relative;
+    margin-bottom: 50px;
+    border: 1px solid #000;
+    font-size: 14px;
+
+    span {
+      position: absolute;
+      top: 100%;
+
+      &::after {
+        font-size: 12px;
+        display: block;
+      }
+    }
+  }
+}
+
+.primaryColours {
+  li {
+    &:nth-child(1) {
+      background-color: @primary-1;
+
+      span::after {
+        content: '@{primary-1}';
+      }
+    }
+
+    &:nth-child(2) {
+      background-color: @primary-2;
+
+      span::after {
+        content: '@{primary-2}';
+      }
+    }
+
+    &:nth-child(3) {
+      background-color: @primary-3;
+
+      span::after {
+        content: '@{primary-3}';
+      }
+    }
+
+    &:nth-child(4) {
+      background-color: @primary-4;
+
+      span::after {
+        content: '@{primary-4}';
+      }
+    }
+
+    &:nth-child(5) {
+      background-color: @primary-5;
+
+      span::after {
+        content: '@{primary-5}';
+      }
+    }
+
+    &:nth-child(6) {
+      background-color: @primary-6;
+
+      span::after {
+        content: '@{primary-6}';
+      }
+    }
+
+    &:nth-child(7) {
+      background-color: @primary-7;
+
+      span::after {
+        content: '@{primary-7}';
+      }
+    }
+
+    &:nth-child(8) {
+      background-color: @primary-8;
+
+      span::after {
+        content: '@{primary-8}';
+      }
+    }
+
+    &:nth-child(9) {
+      background-color: @primary-9;
+
+      span::after {
+        content: '@{primary-9}';
+      }
+    }
+
+    &:nth-child(10) {
+      background-color: @primary-10;
+
+      span::after {
+        content: '@{primary-10}';
+      }
+    }
+  }
+}
+
+.mainColours {
+  li {
+    &:nth-child(1) {
+      background-color: @primary-color;
+
+      span::after {
+        content: '@{primary-color}';
+      }
+    }
+
+    &:nth-child(2) {
+      background-color: @secondary-color;
+
+      span::after {
+        content: '@{secondary-color}';
+      }
+    }
+
+    &:nth-child(3) {
+      background-color: @info-color;
+
+      span::after {
+        content: '@{info-color}';
+      }
+    }
+
+    &:nth-child(4) {
+      background-color: @success-color;
+
+      span::after {
+        content: '@{success-color}';
+      }
+    }
+
+    &:nth-child(5) {
+      background-color: @processing-color;
+
+      span::after {
+        content: '@{processing-color}';
+      }
+    }
+
+    &:nth-child(6) {
+      background-color: @error-color;
+
+      span::after {
+        content: '@{error-color}';
+      }
+    }
+
+    &:nth-child(7) {
+      background-color: @highlight-color;
+
+      span::after {
+        content: '@{highlight-color}';
+      }
+    }
+
+    &:nth-child(8) {
+      background-color: @warning-color;
+
+      span::after {
+        content: '@{warning-color}';
+      }
+    }
+
+    &:nth-child(9) {
+      background-color: @normal-color;
+
+      span::after {
+        content: '@{normal-color}';
+      }
+    }
+  }
+}
+
+.textColours {
+  li {
+    &:nth-child(1) {
+      background-color: @body-background;
+
+      span::after {
+        content: '@{body-background}';
+      }
+    }
+
+    &:nth-child(2) {
+      background-color: @text-color;
+
+      span::after {
+        content: '@{text-color}';
+      }
+    }
+
+    &:nth-child(3) {
+      background-color: @text-color-secondary;
+
+      span::after {
+        content: '@{text-color-secondary}';
+      }
+    }
+
+    &:nth-child(4) {
+      background-color: @text-color-dark;
+
+      span::after {
+        content: '@{text-color-dark}';
+      }
+    }
+
+    &:nth-child(5) {
+      background-color: @text-color-secondary-dark;
+
+      span::after {
+        content: '@{text-color-secondary-dark}';
+      }
+    }
+
+    &:nth-child(6) {
+      background-color: @text-color-inverse;
+
+      span::after {
+        content: '@{text-color-inverse}';
+      }
+    }
+
+    &:nth-child(7) {
+      background-color: @text-selection-bg;
+
+      span::after {
+        content: '@{text-selection-bg}';
+      }
+    }
+
+    &:nth-child(8) {
+      background-color: @link-color;
+
+      span::after {
+        content: '@{link-color}';
+      }
+    }
+
+    &:nth-child(9) {
+      background-color: @link-hover-color;
+
+      span::after {
+        content: '@{link-hover-color}';
+      }
+    }
+
+    &:nth-child(10) {
+      background-color: @link-active-color;
+
+      span::after {
+        content: '@{link-active-color}';
+      }
+    }
+
+    &:nth-child(11) {
+      background-color: @heading-color;
+
+      span::after {
+        content: '@{heading-color}';
+      }
+    }
+
+    &:nth-child(12) {
+      background-color: @heading-color-dark;
+
+      span::after {
+        content: '@{heading-color-dark}';
+      }
+    }
+  }
+}
+
+.backgroundColours {
+  li {
+    &:nth-child(1) {
+      background-color: @background-color-base;
+
+      span::after {
+        content: '@{background-color-base}';
+      }
+    }
+
+    &:nth-child(2) {
+      background-color: @background-color-light;
+
+      span::after {
+        content: '@{background-color-light}';
+      }
+    }
+
+    &:nth-child(3) {
+      background-color: @border-color-base;
+
+      span::after {
+        content: '@{border-color-base}';
+      }
+    }
+
+    &:nth-child(4) {
+      background-color: @border-color-split;
+
+      span::after {
+        content: '@{background-color-light}';
+      }
+    }
+
+    &:nth-child(5) {
+      background-color: @border-color-inverse;
+
+      span::after {
+        content: '@{border-color-inverse}';
+      }
+    }
+
+    &:nth-child(6) {
+      background-color: @outline-color;
+
+      span::after {
+        content: '@{outline-color}';
+      }
+    }
+
+    &:nth-child(7) {
+      background-color: @disabled-color;
+
+      span::after {
+        content: '@{disabled-color}';
+      }
+    }
+
+    &:nth-child(8) {
+      background-color: @disabled-bg;
+
+      span::after {
+        content: '@{disabled-bg}';
+      }
+    }
+
+    &:nth-child(9) {
+      background-color: @disabled-color-dark;
+
+      span::after {
+        content: '@{disabled-color-dark}';
+      }
+    }
+
+    &:nth-child(10) {
+      background-color: @shadow-color;
+
+      span::after {
+        content: '@{shadow-color}';
+      }
+    }
+
+    &:nth-child(11) {
+      background-color: @shadow-color-inverse;
+
+      span::after {
+        content: '@{shadow-color-inverse}';
+      }
+    }
+  }
+}

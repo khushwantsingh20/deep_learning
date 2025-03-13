@@ -1,0 +1,29 @@
+// Do not include concrete CSS rules in here, only include variables
+// otherwise you may end up with duplicate css rules
+
+// You only need to include this if you're refering to default variables or mixins
+@import '~antd/lib/style/themes/default';
+
+// see https://github.com/ant-design/ant-design/blob/master/components/style/themes/default.less
+// see https://github.com/ant-design/ant-design/blob/master/components/style/color/colors.less
+
+@import './_common-variables';
+
+// Some good defaults
+@font-size-base: 15px;
+@font-size-lg: 18px;
+@font-size-sm: 13px;
+
+@heading-1-size: 36px;
+@heading-2-size: 28px;
+@heading-3-size: 18px;
+@heading-4-size: 16px;
+
+// djrad
+@djrad-background-color-base: hsl(204, 25%, 98%);
+@djrad-border-color-base: hsl(204, 25%, 98%);
+
+@table-padding-vertical: 14px;
+@table-padding-horizontal: 10px;
+
+@table-row-hover-bg: @brand-lightest;

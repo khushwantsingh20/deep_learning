@@ -1,0 +1,223 @@
+@import (reference) '../../styles/defs/_variables';
+@import (reference) '../../styles/defs/_mixins';
+
+// some defaults
+.btn {
+  .resetBtn;
+
+  color: @secondary-color;
+  border: 1px solid @border-color-base;
+
+  &:hover,
+  &:focus {
+    background: @secondary-color;
+    color: #fff;
+    border-color: @secondary-color;
+  }
+
+  &:focus {
+    outline: none; // remove focus indicator
+    box-shadow: 0 0 3px 3px @info-color !important; // replace with a more styled version, ensure it is used.
+  }
+
+  line-height: @line-height-base;
+}
+
+.label {
+  display: inline-block;
+  padding: 6px 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.2;
+  margin-top: 4px;
+}
+
+.iconButton {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+
+  .selectedIcon {
+    display: none;
+    position: absolute;
+    color: #fff;
+    width: 16px;
+    height: 15px;
+  }
+
+  &:not(.isSquare) {
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    vertical-align: text-top;
+    max-width: 70px;
+
+    .btn {
+      width: 70px;
+      height: 70px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 0 1 auto;
+      border-radius: 50%;
+    }
+
+    .text {
+      text-transform: uppercase;
+    }
+
+    @media (min-width: @screen-md) {
+      max-width: 120px;
+
+      .btn {
+        width: 120px;
+        height: 120px;
+      }
+    }
+  }
+
+  // icon version
+  &.hasIcon {
+    .icon,
+    .icon svg {
+      display: block;
+      width: 35px;
+      height: 35px;
+
+      @media (min-width: @screen-md) {
+        width: 68px;
+        height: 68px;
+      }
+    }
+  }
+
+  // mini Icon version
+  &.miniIcon {
+    .icon,
+    .icon svg {
+      display: block;
+      width: 20px;
+      height: 20px;
+    }
+
+    .btn {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  // square version
+  &.isSquare {
+    display: inline-block;
+    vertical-align: middle;
+
+    .btn {
+      border-radius: 0;
+      padding: 10px 30px;
+      background: @brand-gradient;
+      color: #fff;
+      min-width: 130px;
+
+      &:hover {
+        color: #fff;
+        background: @secondary-color;
+      }
+    }
+  }
+
+  // selected state
+  &.isSelected {
+    .selectedIcon {
+      display: inline-block;
+      top: 50%;
+      right: auto;
+      left: 15px;
+      margin-top: -10px;
+    }
+
+    .btn {
+      background: @brand;
+      border-color: darken(@brand, 5);
+      color: #fff;
+
+      &:hover,
+      &:focus {
+        background: @brand-darker;
+        color: #fff;
+
+        .selectedIcon {
+          color: #fff;
+        }
+      }
+    }
+
+    &.isSquare {
+      .btn {
+        padding-right: 25px;
+        padding-left: 35px;
+      }
+    }
+
+    &:not(.isSquare) {
+      .btn {
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+      }
+
+      .selectedIcon {
+        display: none;
+      }
+    }
+  }
+
+  // siblings
+  & + .iconButton {
+    margin-left: 20px;
+  }
+}
+
+&.isInactive {
+  opacity: 0.8;
+  .label {
+    opacity: 0.5;
+  }
+
+  .btn {
+    border-color: @border-color-base;
+    background: #f9f9f9;
+    color: rgba(@secondary-color, 0.5);
+
+    &:focus,
+    &:hover,
+    &:active {
+      color: #fff;
+      background: rgba(@secondary-color, 0.9);
+    }
+  }
+}
+
+&.isDisabled {
+  .btn {
+    // Workaround for an issue with Ant's Tooltip component not disappearing
+    // on hover when a button is disabled. This will remove the cursor on hover
+    // but there is no better solution currently.
+    // https://github.com/react-component/tooltip/issues/18
+    pointer-events: none;
+  }
+}
+
+&.isDisabled,
+&.isInactive.isDisabled {
+  color: #b9bfca;
+
+  .btn {
+    &,
+    &:focus,
+    &:hover,
+    &:active {
+      border-color: @btn-disable-border;
+      background: #f2f2f2;
+      color: #b9bfca;
+      cursor: default;
+    }
+  }
+}

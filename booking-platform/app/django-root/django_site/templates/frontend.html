@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% load static %}
+{% load escapejson %}
+{% load render_entry_point from alliance_webpack %}
+{% block title %}Southern Cross{% endblock %}
+{% block head %}
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-76547925-1"></script>
+  <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-76547925-1');
+  </script>
+  <!-- Global site tag (gtag.js) - Google Ads: 982077120 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-982077120"></script>
+  <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-982077120');
+  </script>
+  {% if not is_mobile_app %}
+  <script>
+      var $buoop = {required:{e:-4,f:-3,o:-3,s:-3,c:-3},insecure:true,unsupported:true,api:2020.03};
+      function $buo_f(){
+          var e = document.createElement("script");
+          e.src = "//browser-update.org/update.min.js";
+          document.body.appendChild(e);
+      };
+      try {document.addEventListener("DOMContentLoaded", $buo_f,false)}
+      catch(e){window.attachEvent("onload", $buo_f)}
+  </script>
+  {% endif %}
+  {% render_entry_point entry_point 'css' %}
+{% endblock %}
+{% block content %}
+  <div id="root"></div>
+{% endblock %}
+{% block bodyend %}
+  {% if DJRAD_ENABLED %}
+    {% if DEBUG %}
+      <script src="{% url site.model_data_reverse_name %}" ></script>
+    {% else %}
+      {# Generate by running manage.py collectstatic_djrad #}
+      <script src="{% static site_static_filename %}"></script>
+    {% endif %}
+  {% endif %}
+  <script>
+      window.__APP_CONTEXT__ = {{ app_context|escapejson }}
+  </script>
+  <!-- This csrf_token is included to force Django to set the CSRF
+       cookie, whose value we append to unsafe HTTP requests at the
+       API level. The value stored in this hidden field
+       is never explicitly submitted with any request, and should not be
+       relied upon or accessed. -->
+  {% csrf_token %}
+  {% if DEBUG %}
+    {# See https://reactjs.org/docs/cross-origin-errors.html #}
+    {% render_entry_point entry_point 'js' attrs="crossorigin" %}
+  {% else %}
+    {% render_entry_point entry_point 'js' %}
+  {% endif %}
+{% endblock %}

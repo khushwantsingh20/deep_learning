@@ -1,0 +1,132 @@
+{
+  "status": "done",
+  "entrypoints": {
+    "admin": [
+      {
+        "name": "runtime.bundle.js",
+        "contentHash": "46414d5160ee3ca59fb5"
+      },
+      {
+        "name": "runtime.bundle.js.map",
+        "contentHash": ""
+      },
+      {
+        "name": "vendor.bundle.js",
+        "contentHash": "397ecc7a0d76c0cce24d"
+      },
+      {
+        "name": "vendor.bundle.js.map",
+        "contentHash": ""
+      },
+      {
+        "name": "common.bundle.0.css",
+        "contentHash": "cea3580e02422251442e"
+      },
+      {
+        "name": "common.bundle.js",
+        "contentHash": "d1f64cc312630a18c2f3"
+      },
+      {
+        "name": "common.bundle.js.map",
+        "contentHash": ""
+      },
+      {
+        "name": "admin.bundle.3.css",
+        "contentHash": "3cf80a4fc975bcd94d6b"
+      },
+      {
+        "name": "admin.bundle.js",
+        "contentHash": "21d3320546cc11374df4"
+      },
+      {
+        "name": "admin.bundle.js.map",
+        "contentHash": ""
+      }
+    ],
+    "app": [
+      {
+        "name": "runtime.bundle.js",
+        "contentHash": "46414d5160ee3ca59fb5"
+      },
+      {
+        "name": "runtime.bundle.js.map",
+        "contentHash": ""
+      },
+      {
+        "name": "vendor.bundle.js",
+        "contentHash": "397ecc7a0d76c0cce24d"
+      },
+      {
+        "name": "vendor.bundle.js.map",
+        "contentHash": ""
+      },
+      {
+        "name": "common.bundle.0.css",
+        "contentHash": "cea3580e02422251442e"
+      },
+      {
+        "name": "common.bundle.js",
+        "contentHash": "d1f64cc312630a18c2f3"
+      },
+      {
+        "name": "common.bundle.js.map",
+        "contentHash": ""
+      },
+      {
+        "name": "app.bundle.4.css",
+        "contentHash": "39da1418fd58f91120a6"
+      },
+      {
+        "name": "app.bundle.js",
+        "contentHash": "82dbe21fc931c8d36adf"
+      },
+      {
+        "name": "app.bundle.js.map",
+        "contentHash": ""
+      }
+    ],
+    "driver": [
+      {
+        "name": "runtime.bundle.js",
+        "contentHash": "46414d5160ee3ca59fb5"
+      },
+      {
+        "name": "runtime.bundle.js.map",
+        "contentHash": ""
+      },
+      {
+        "name": "vendor.bundle.js",
+        "contentHash": "397ecc7a0d76c0cce24d"
+      },
+      {
+        "name": "vendor.bundle.js.map",
+        "contentHash": ""
+      },
+      {
+        "name": "common.bundle.0.css",
+        "contentHash": "cea3580e02422251442e"
+      },
+      {
+        "name": "common.bundle.js",
+        "contentHash": "d1f64cc312630a18c2f3"
+      },
+      {
+        "name": "common.bundle.js.map",
+        "contentHash": ""
+      },
+      {
+        "name": "driver.bundle.5.css",
+        "contentHash": "cec4a4e38b93a1ed60b9"
+      },
+      {
+        "name": "driver.bundle.js",
+        "contentHash": "e380c11573f5660e0eaa"
+      },
+      {
+        "name": "driver.bundle.js.map",
+        "contentHash": ""
+      }
+    ]
+  },
+  "publicPath": "/assets/dist/"
+}

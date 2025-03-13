@@ -1,0 +1,139 @@
+{% extends './limomate_client_email_base.html' %} {% load static %} {% block header %}Your Booking
+&ndash; {{ booking_number }}{% endblock header %} {% block emailcontent %}
+<h2 class="sub-head">Thank you for booking with Southern Cross!</h2>
+
+<p>Dear {{ name }},</p>
+<p>Please find a summary of your booking below.</p>
+
+<table class="data">
+    <tbody>
+      <tr>
+        <th>Reservation:</th>
+        <td><strong>{{ booking_number }}</strong></td>
+      </tr>
+      <tr>
+        <th>Billing Account:</th>
+        <td>{{ account }}</td>
+      </tr>
+      <tr>
+        <th>Date:</th>
+        <td><strong>{{ travel_on|date:"D j M Y" }}</strong></td>
+      </tr>
+      <tr>
+        <th>Time:</th>
+        <td><strong>{{ travel_on|date:"g:i A" }}</strong></td>
+      </tr>
+      <tr>
+        <th>Passenger:</th>
+        <td>{{ passenger_name }}</td>
+      </tr>
+      <tr>
+        <th valign="top">From:</th>
+        <td>{{ from_address|linebreaksbr }}</td>
+      </tr>
+      {% if pickup_notes %}
+      <tr>
+        <th valign="top">Pickup ins.:</th>
+        <td>{{ pickup_notes }}</td>
+      </tr>
+      {% endif %}
+      {% if additional_stops %}
+        {% with first_stop=additional_stops|first %}
+          <tr>
+            <th valign="top">Via:</th>
+            <td>{{ first_stop.formatted_address }}</td>
+          </tr>
+          {% if first_stop.address_instructions %}
+            <tr>
+              <th></th>
+              <td>{{ first_stop.address_instructions }}</td>
+            </tr>
+          {% endif %}
+        {% endwith %}
+      {% endif %}
+      {% if additional_stops|slice:"1:" %}
+        {% for stop in additional_stops|slice:"1:" %}
+          <tr>
+              <td />
+              <td>{{ stop.formatted_address }}</td>
+          </tr>
+          {% if stop.address_instructions %}
+            <tr>
+              <td />
+              <td>{{ stop.address_instructions }}</td>
+            </tr>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+      <tr>
+        <th valign="top">To:</th>
+        <td>{{ to_address|linebreaksbr }}</td>
+      </tr>
+      {% if destination_notes  %}
+        <tr>
+          <th valign="top">Destination ins.:</th>
+          <td>{{ destination_notes }}</td>
+        </tr>
+      {% endif %}
+      <tr>
+        <th>Car type:</th>
+        <td>{{ car_type }}</td>
+      </tr>
+      <tr>
+        <th>No. of passengers:</th>
+        <td>{{ passenger_count }}</td>
+      </tr>
+      <tr>
+        <th>Checked in luggage:</th>
+        <td>{{ bag_count }}</td>
+      </tr>
+      {% if driver_notes %}
+        <tr>
+          <th>Driver ins.:</th>
+          <td>{{ driver_notes }}</td>
+        </tr>
+      {% endif %}
+      <tr>
+        <th>Payment method:</th>
+        <td>{{ payment_method }}</td>
+      </tr>
+      {% for line in breakdown %}
+        <tr>
+          <th>{{ line.label }}:</th>
+          <td><div class="breakdown">{{ line.value }}</div></td>
+        </tr>
+      {% endfor %}
+        <tr>
+            <th>Total:</th>
+          <td><div class="breakdown">{{ total_charge }}</div></td>
+        </tr>
+    </tbody>
+</table>
+
+<p>We look forward to seeing you soon,</p>
+<p>
+    Kind Regards,<br />
+    Limomate by Southern Cross
+</p>
+
+<div class="terms">
+    <p class="terms-intro">
+        For changes and cancellations please contact <a href="tel:1300125466">1300 12 LIMO</a> or
+        <a href="mailto:bookings@mylimomate.com.au">bookings@mylimomate.com.au</a>.
+    </p>
+
+    <ul>
+        <li>Rates are inclusive of tolls &amp; GST and State Government Taxes.</li>
+        <li>Credit card surcharges apply.</li>
+        <li>
+            Additional charges will apply if driver waits more than 30 minutes for Melbourne Airport
+            pick-ups and 10 minutes on all other bookings.
+        </li>
+        <li>Parking from the Airport is passed on at cost.</li>
+        <li>You can now <a href="{{ domain }}/">book online via our booking portal</a>.</li>
+    </ul>
+
+    <p>View our full <a href="{{ domain }}/terms-conditions/">terms and conditions</a></p>
+</div>
+
+{% endblock emailcontent %}

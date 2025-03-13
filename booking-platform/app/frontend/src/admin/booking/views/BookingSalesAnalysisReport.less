@@ -1,0 +1,111 @@
+@import (reference) '../../../styles/defs/_variables';
+
+.salesAnalysis {
+  composes: printStyles from './BookingJobListReport.less';
+}
+
+.table {
+  font-family: 'Arial Narrow', Arial, sans-serif;
+
+  tr {
+    td,
+    th {
+      padding: 4px 5px 0;
+      vertical-align: bottom;
+    }
+
+    td {
+      font-size: 15px;
+    }
+  }
+
+  tbody.rows tr:nth-child(4n),
+  tbody.rows tr:nth-child(4n - 1) {
+    td,
+    th {
+      background-color: #f2f5f7;
+    }
+  }
+
+  .sectionLabel {
+    font-size: 19px;
+    font-weight: bold;
+
+    th {
+      padding: 10px 0;
+    }
+  }
+
+  .sectionHeader {
+    th {
+      font-size: 16px;
+      border-bottom: 2px solid black;
+    }
+  }
+}
+
+.footer {
+  th,
+  td {
+    font-size: 16px !important;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    padding: 10px 5px;
+    font-weight: bold;
+  }
+
+  td {
+    text-align: right;
+  }
+}
+
+.grandTotal {
+  th,
+  td {
+    font-size: 19px !important;
+    font-weight: bold;
+  }
+
+  td {
+    text-align: right;
+  }
+}
+
+.numeric {
+  text-align: right;
+}
+
+.accountNo {
+  composes: numeric;
+  width: 70px;
+  font-weight: bold;
+}
+
+.total {
+  composes: numeric;
+  width: 120px;
+}
+
+.tableHead {
+  font-size: 27px;
+  display: flex;
+  align-items: baseline;
+
+  .dateRange {
+    flex: 1;
+    font-weight: normal;
+    font-size: 19px;
+  }
+}
+
+.loading {
+  opacity: 0.5;
+}
+
+.filterForm {
+  :global {
+    .ant-form-item-label label {
+      font-size: 19px;
+    }
+  }
+}

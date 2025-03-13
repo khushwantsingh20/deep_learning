@@ -1,0 +1,25 @@
+{% extends './limomate_client_email_base.html' %}
+
+{% block title %}Limomate booking declined{% endblock title %}
+
+{% block header %}Your booking has been declined{% endblock header %}
+
+{% block emailcontent %}
+  <p>
+    Dear {% if title %}{{ title }} {{ last_name }}{% else %}{{ first_name }} {{ last_name }}{% endif %},
+  </p>
+  <p>
+    We have received your request for a car for <strong>{{ travel_on|date:"l jS F Y" }}</strong>
+    at <strong>{{ travel_on|date:"g:i A" }}</strong>, travelling from <strong>{{ from_address }}</strong>{% if to_address %} to
+    <strong>{{ to_address }}</strong>{% endif %}
+  </p>
+
+  <p>Unfortunately we are unable to provide a driver at this time.</p>
+  <p>We apologise for any inconvenience.</p>
+  <p>Should you wish to discuss, please feel welcome to call.</p>
+
+  <p>Kind Regards,<br />
+    Limomate by Southern Cross</p>
+
+  <p>For changes and cancellations, please contact 1300 12 LIMO or bookings@mylimomate.com.au</p>
+{% endblock emailcontent %}

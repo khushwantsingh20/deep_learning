@@ -1,0 +1,42 @@
+// All used icons must be explictly imported and exported here. The easiest way to do this
+// is to use an icon, eg. <Icon type="control" /> and then do what the build error tells
+// you (it will tell you what you need to add here)
+export { default as ArrowRightOutline } from '@ant-design/icons/lib/outline/ArrowRightOutline';
+export { default as CaretUpOutline } from '@ant-design/icons/lib/outline/CaretUpOutline';
+export { default as CaretUpFill } from '@ant-design/icons/lib/fill/CaretUpFill';
+export { default as CaretDownOutline } from '@ant-design/icons/lib/outline/CaretDownOutline';
+export { default as CaretDownFill } from '@ant-design/icons/lib/fill/CaretDownFill';
+export { default as CheckCircleFill } from '@ant-design/icons/lib/fill/CheckCircleFill';
+export { default as CheckSquareOutline } from '@ant-design/icons/lib/outline/CheckSquareOutline';
+export { default as CloseCircleFill } from '@ant-design/icons/lib/fill/CloseCircleFill';
+export { default as CloseOutline } from '@ant-design/icons/lib/outline/CloseOutline';
+export { default as ControlOutline } from '@ant-design/icons/lib/outline/ControlOutline';
+export { default as ContactsOutline } from '@ant-design/icons/lib/outline/ContactsOutline';
+export { default as CopyTwoTone } from '@ant-design/icons/lib/twotone/CopyTwoTone';
+export { default as DownOutline } from '@ant-design/icons/lib/outline/DownOutline';
+export { default as EditOutline } from '@ant-design/icons/lib/outline/EditOutline';
+export { default as ExclamationOutline } from '@ant-design/icons/lib/outline/ExclamationOutline';
+export { default as FilterOutline } from '@ant-design/icons/lib/outline/FilterOutline';
+export { default as FilterFill } from '@ant-design/icons/lib/fill/FilterFill';
+export { default as InfoCircleTwoTone } from '@ant-design/icons/lib/twotone/InfoCircleTwoTone';
+export { default as LeftOutline } from '@ant-design/icons/lib/outline/LeftOutline';
+export { default as LinkOutline } from '@ant-design/icons/lib/outline/LinkOutline';
+export { default as LinkedinOutline } from '@ant-design/icons/lib/outline/LinkedinOutline';
+export { default as LikeOutline } from '@ant-design/icons/lib/outline/LikeOutline';
+export { default as InstagramOutline } from '@ant-design/icons/lib/outline/InstagramOutline';
+export { default as FacebookOutline } from '@ant-design/icons/lib/outline/FacebookOutline';
+export { default as LoadingOutline } from '@ant-design/icons/lib/outline/LoadingOutline';
+export { default as MinusOutline } from '@ant-design/icons/lib/outline/MinusOutline';
+export { default as PlusOutline } from '@ant-design/icons/lib/outline/PlusOutline';
+export { default as RightOutline } from '@ant-design/icons/lib/outline/RightOutline';
+export { default as QuestionOutline } from '@ant-design/icons/lib/outline/QuestionOutline';
+export { default as MenuOutline } from '@ant-design/icons/lib/outline/MenuOutline';
+export { default as PhoneOutline } from '@ant-design/icons/lib/outline/PhoneOutline';
+export { default as StopOutline } from '@ant-design/icons/lib/outline/StopOutline';
+export { default as UserOutline } from '@ant-design/icons/lib/outline/UserOutline';
+export { default as UpOutline } from '@ant-design/icons/lib/outline/UpOutline';
+export { default as CarOutline } from '@ant-design/icons/lib/outline/CarOutline';
+export { default as DollarOutline } from '@ant-design/icons/lib/outline/DollarOutline';
+export { default as LineChartOutline } from '@ant-design/icons/lib/outline/LineChartOutline';
+export { default as LogoutOutline } from '@ant-design/icons/lib/outline/LogoutOutline';
+export { default as WarningOutline } from '@ant-design/icons/lib/outline/WarningOutline';

@@ -1,0 +1,112 @@
+.button-color(@color; @background; @border) {
+  color: @color;
+  background: @background;
+  border-color: @border;
+}
+
+.button-variant-primary-gradient(@color, @background, @border) {
+  .button-color(@color; @brand-gradient; @border);
+
+  &:hover,
+  &:focus {
+    .button-color(@color; @secondary-color; @secondary-color;);
+  }
+
+  &:active,
+  &.active {
+    .button-color(
+      @color; ~`colorPalette('@{background}', 7) `; ~`colorPalette('@{background}', 7) `
+    );
+  }
+
+  .button-disabled();
+}
+
+.button-variant-primary(@color; @background) {
+  .button-color(@color; @background; @background);
+
+  &:hover,
+  &:focus {
+    .button-color(@color; @secondary-color; @secondary-color;);
+  }
+
+  &:active,
+  &.active {
+    .button-color(
+      @color; ~`colorPalette('@{background}', 7) `; ~`colorPalette('@{background}', 7) `
+    );
+  }
+
+  .button-disabled();
+}
+
+.button-variant-other(@color; @background; @border) {
+  .button-color(@color; @background; @border);
+
+  &:hover,
+  &:focus {
+    .button-color(
+      ~`colorPalette('@{btn-primary-bg}', 6) `; @background; ~`colorPalette('@{btn-primary-bg}', 6)
+        `
+    );
+  }
+}
+.button-variant-danger(@color; @background; @border) {
+  &.btn-link {
+    margin: 0;
+    padding: 0;
+    text-decoration: @link-decoration;
+    cursor: pointer;
+    background: none;
+    border: none;
+    &:hover,
+    &:active {
+      .button-color(~`colorPalette('@{color}', 9) `; transparent ; transparent);
+    }
+    &:active {
+      margin: 0;
+      padding: 0;
+      outline: none;
+    }
+    &:focus {
+      overflow: hidden;
+    }
+  }
+}
+.@{btn-prefix-cls} {
+  &-primary-gradient {
+    .button-variant-primary-gradient(#fff, @brand-gradient, @brand);
+  }
+  &-success {
+    .button-variant-other(#fff, @success-color, @success-color);
+  }
+}
+// Inline <button> link, ant variation adds padding etc
+// set-up our own one for buttons as inline links.
+.btn-inline-link {
+  margin: 0;
+  padding: 0;
+  color: @link-color;
+  text-decoration: @link-decoration;
+  cursor: pointer;
+  background: none;
+  border: none;
+  &:hover,
+  &:focus {
+    color: @link-hover-color;
+    text-decoration: @link-hover-decoration;
+  }
+  &:active {
+    color: @link-active-color;
+  }
+}
+// Meant for Ant button types that still retain colour
+// but look like a link e.g. <Button type="danger" className="btn-link">Danger High Voltage</Button>
+.btn-link {
+  margin: 0;
+  padding: 0;
+  text-decoration: @link-decoration;
+  cursor: pointer;
+  background: none;
+  border: none;
+}

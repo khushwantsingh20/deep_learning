@@ -1,0 +1,89 @@
+@import (reference) '../../../styles/defs/_variables.less';
+@import (reference) '../../../styles/defs/_mixins.less';
+
+.clientName {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.clientEmail {
+  color: @text-color-secondary;
+}
+
+.userFauxTable {
+  .headings {
+    display: flex;
+    align-items: center;
+    padding: @padding-md @padding-sm;
+    background: @table-header-bg;
+
+    > div {
+      flex: 1;
+      text-align: center;
+
+      &:first-child {
+        flex: 3;
+        text-align: left;
+      }
+    }
+
+    @media (max-width: @screen-md-max) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 10px;
+
+      > div {
+        text-align: left;
+      }
+    }
+  }
+
+  .empty {
+    text-align: center;
+    padding: @padding-lg 0;
+  }
+}
+
+.userFauxTableRow {
+  display: flex;
+  border-bottom: 1px solid @border-color-base;
+  align-items: center;
+  padding: @padding-md @padding-sm;
+
+  :global(.ant-form-item) {
+    margin-bottom: 0;
+  }
+
+  > div {
+    flex: 1;
+    text-align: center;
+
+    &:first-child {
+      flex: 3;
+      text-align: left;
+    }
+  }
+
+  :global(.ant-checkbox-wrapper > span:not(.ant-checkbox)) {
+    .sr-only;
+  }
+
+  @media (max-width: @screen-md-max) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+  }
+}
+
+.actionHeading {
+  display: flex;
+  align-items: center;
+
+  :global(.ant-btn) {
+    margin-left: auto;
+  }
+}
+
+.tooltip {
+  cursor: help;
+}

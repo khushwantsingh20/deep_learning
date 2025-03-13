@@ -1,0 +1,73 @@
+@import (reference) '../../styles/defs/_variables.less';
+
+.headings {
+  display: flex;
+  align-items: center;
+}
+
+.pageHeader {
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid @border-color-base;
+  margin-bottom: @padding-lg;
+  padding-bottom: @padding-sm;
+
+  .mainHeading {
+    margin-bottom: 0;
+    font-size: @heading-2-size;
+    line-height: 1.4;
+  }
+
+  .buttons {
+    * + * {
+      margin-left: 5px;
+    }
+  }
+}
+
+.breadcrumbs:global(.ant-breadcrumb) {
+  background-color: @background-color-light;
+  padding: 5px 0 5px 17px;
+  margin-left: -@padding-sm;
+  margin-right: -@padding-sm;
+  margin-bottom: 10px;
+}
+
+.rightSection {
+  margin-left: auto;
+  display: flex;
+}
+
+.buttons {
+  margin-right: 100px;
+}
+
+.adminPageHeader {
+  composes: pageHeader;
+  margin-bottom: 0;
+  background: @brand-mid;
+  border-bottom-color: @border-color-dark;
+  color: #fff;
+  padding: 8px 15px;
+
+  .mainHeading,
+  .subHeading {
+    color: #fff;
+  }
+
+  .mainHeading {
+    font-size: 21px;
+  }
+
+  .buttons {
+    align-self: center;
+    margin-right: 20px;
+  }
+
+  :global(.main) & {
+    margin-left: -@padding-sm;
+    margin-right: -@padding-sm;
+    margin-top: -@padding-sm;
+  }
+}

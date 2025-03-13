@@ -1,0 +1,65 @@
+.travelOnWrapper {
+  display: flex;
+  > div:first-child {
+    margin-right: 30px;
+  }
+}
+
+.datePicker {
+  :global(.ant-calendar-body) {
+    font-size: 2em;
+  }
+  :global(.ant-calendar-date) {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  :global(.ant-calendar) {
+    width: 590px;
+  }
+  :global(.ant-calendar-input-wrap) {
+    height: 60px;
+  }
+  :global(.ant-calendar-input) {
+    height: 44px;
+    font-size: 2em;
+  }
+  :global(.ant-calendar-header),
+  :global(.ant-calendar-footer) {
+    font-size: 2em;
+    line-height: 80px;
+    height: 80px;
+    :global(.ant-calendar-next-month-btn),
+    :global(.ant-calendar-next-year-btn),
+    :global(.ant-calendar-prev-month-btn),
+    :global(.ant-calendar-prev-year-btn) {
+      font-size: 2em;
+      line-height: 80px;
+      &:before,
+      &:after {
+        height: 16px;
+        width: 16px;
+      }
+    }
+    :global(.ant-calendar-next-year-btn) {
+      right: 4px;
+      &:before {
+        left: 6px;
+      }
+    }
+    :global(.ant-calendar-next-month-btn) {
+      right: 38px;
+    }
+    :global(.ant-calendar-prev-year-btn) {
+      left: 4px;
+      &:after {
+        left: -6px;
+      }
+    }
+    :global(.ant-calendar-prev-month-btn) {
+      left: 38px;
+    }
+  }
+}

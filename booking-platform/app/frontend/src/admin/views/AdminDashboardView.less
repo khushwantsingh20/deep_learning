@@ -1,0 +1,21 @@
+.btnwrapper {
+  text-align: center;
+
+  :global {
+    .ant-btn {
+      + .ant-btn {
+        margin-left: 10px;
+      }
+    }
+
+    .ant-btn-round.ant-btn-lg {
+      font-size: 16px;
+    }
+  }
+
+  .btnDesc {
+    font-size: 12px;
+    display: inline-block;
+    margin: 0 4px;
+  }
+}

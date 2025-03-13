@@ -1,0 +1,41 @@
+.header {
+  padding: 10px 10px 0 20px;
+  text-align: center;
+}
+
+.table {
+  margin: 5px 10px 12px;
+  width: 100%;
+
+  td,
+  th {
+    padding: 3px 8px;
+    font-size: 13px;
+    text-align: left;
+  }
+
+  th {
+    font-size: 11px;
+    font-weight: 600;
+    width: 33%;
+    line-height: 1.1;
+  }
+
+  ol {
+    padding: 0 0 0 12px;
+    margin: 0;
+
+    li {
+      :global(.formattedAddress) {
+        display: block;
+      }
+    }
+  }
+
+  .adr {
+    th,
+    td {
+      vertical-align: top;
+    }
+  }
+}

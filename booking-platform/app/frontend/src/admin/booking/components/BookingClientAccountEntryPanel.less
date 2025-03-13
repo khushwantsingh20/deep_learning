@@ -1,0 +1,44 @@
+.label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  :global(.ant-btn) {
+    padding: 0;
+    margin: 0;
+    height: auto;
+    font-weight: normal;
+  }
+}
+
+.clientUserOption {
+  display: flex;
+}
+.clientUserName {
+  flex: 1;
+  padding-right: 5px;
+  max-width: 400px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.clientUserPhone,
+.clientUserSuburb,
+.clientUserEmail {
+  padding-right: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 100px;
+}
+.clientUserSuburb {
+  width: 120px;
+}
+.clientUserEmail {
+  width: 250px;
+}
+.clientUserHeader {
+  font-weight: bold;
+  border-bottom: 1px solid black;
+  padding: 5px 12px;
+  display: flex;
+}

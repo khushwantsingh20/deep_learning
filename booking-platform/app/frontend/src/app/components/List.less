@@ -1,0 +1,27 @@
+@import (reference) '../../styles/defs/_variables.less';
+@import (reference) '../../styles/defs/_mixins.less';
+
+.list {
+  .resetList;
+
+  li {
+    display: flex;
+    align-items: center;
+    padding: @padding-sm;
+    border-bottom: 1px solid @border-color-base;
+
+    .actions {
+      margin-left: auto;
+
+      > a {
+        padding: 8px 15px;
+        display: inline-block;
+      }
+
+      :global(.ant-btn) {
+        // consistency of width so links align
+        min-width: 100px;
+      }
+    }
+  }
+}

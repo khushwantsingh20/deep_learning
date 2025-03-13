@@ -1,0 +1,114 @@
+@import (reference) '../../styles/defs/_variables';
+
+.slide {
+  min-height: 540px;
+  display: flex;
+  background-size: auto 225px;
+  background-repeat: no-repeat;
+
+  @media (max-width: @screen-xs-max) {
+    background-position: center 0;
+  }
+
+  @media (min-width: @screen-lg) {
+    background-size: cover;
+  }
+}
+
+.sliderBody {
+  display: flex;
+  flex: 1;
+}
+
+.sliderContent {
+  margin-left: auto;
+  color: #fff;
+  font-size: 21px;
+  position: relative;
+  overflow: hidden;
+
+  @media (max-width: @screen-xs-max) {
+    margin-bottom: @padding-lg;
+  }
+
+  @media (min-width: @screen-lg) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 0 1 60%;
+    padding-left: 10%;
+    font-size: 26px;
+  }
+
+  & > * {
+    position: relative;
+    z-index: 2;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 200px;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, #103338 0%, #04040a 100%);
+    opacity: 0.7;
+    z-index: 1;
+    transform: skewX(30deg);
+    width: 100%;
+
+    @supports (mix-blend-mode: multiply) {
+      background: @brand-gradient;
+      mix-blend-mode: multiply;
+      opacity: 1;
+    }
+  }
+}
+
+.quote {
+  font-size: 21px;
+  font-style: normal;
+  font-weight: normal;
+  padding-left: 80px;
+  position: relative;
+
+  cite {
+    font-size: 18px;
+  }
+
+  &::before {
+    content: '\201c';
+    font-size: 150px;
+    position: absolute;
+    left: 0;
+    top: -45px;
+    line-height: 1;
+  }
+
+  @media (max-width: @screen-xs-max) {
+    margin-top: 225px;
+    margin-bottom: 0;
+    padding: 50px 15px 50px 80px;
+    background: @brand-gradient;
+
+    &::before {
+      top: 0;
+    }
+  }
+
+  @media (min-width: @screen-lg) {
+    max-width: 550px;
+    margin-left: 100px;
+    font-size: 26px;
+    padding-left: 100px;
+
+    cite {
+      font-size: 24px;
+    }
+
+    &::before {
+      font-size: 200px;
+    }
+  }
+}

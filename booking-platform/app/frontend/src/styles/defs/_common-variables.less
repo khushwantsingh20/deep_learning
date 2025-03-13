@@ -1,0 +1,50 @@
+@brand: #2cace3;
+@brand-darker: darken(@brand, 8); // hsl(198,77,45)
+@brand-lighter: lighten(@brand, 35); // hsl(198,77,88)
+@brand-lightest: lighten(@brand, 42); // hsl(198,77,95)
+
+@brand-mid: desaturate(darken(spin(@brand, 9), 16), 6); // #1b64a1
+@brand-mid-lighter: desaturate(lighten(@brand-mid, 47), 30); // #c5d8e7
+
+@brand-heavy: desaturate(darken(spin(@brand, 22), 22), 41); // #32456a
+@brand-dark: desaturate(darken(spin(@brand, 48), 39), 20); // #130f37
+
+@brand-gradient: @brand-dark linear-gradient(90deg, @brand 0%, @brand-dark 100%);
+
+@primary-color: @brand;
+@secondary-color: @brand-dark;
+@blue-mid: @brand-mid;
+@selected-color: #ffde00;
+@text-color-secondary: fade(@black, 55%);
+
+@error-color: #f21825;
+@warning-color: #ffa800;
+@success-color: #0acc63;
+
+@heading-color: @brand-dark;
+@text-color: @brand-dark;
+
+@font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+@layout-header-background: @brand-dark;
+
+// Buttons
+@btn-font-weight: 500;
+@btn-primary-bg: @brand;
+@btn-shadow: none;
+@btn-primary-shadow: @btn-shadow;
+@btn-text-shadow: none;
+@btn-border-radius-base: 0;
+@btn-default-border: @brand;
+@btn-default-color: @brand;
+
+@background-color-base: hsl(204, 25%, 96%);
+@background-color-light: hsl(204, 25%, 98%);
+@border-color-base: #d1d0d8;
+@border-color-mid: #9f9eae;
+@border-color-dark: #423f5f;
+@border-color-split: #e6e8ea;
+
+// djrad
+@djrad-background-color-base: hsl(204, 25%, 98%);
+@djrad-border-color-base: hsl(204, 25%, 98%);

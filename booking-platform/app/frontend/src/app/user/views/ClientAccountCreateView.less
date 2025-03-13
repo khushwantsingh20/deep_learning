@@ -1,0 +1,91 @@
+@import (reference) '../../../styles/defs/_variables.less';
+@import (reference) '../../../styles/defs/_mixins.less';
+
+.createAccount {
+  h2 {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  :global {
+    .ant-form {
+      p {
+        line-height: 1.4;
+      }
+
+      .ant-form-item-label {
+        text-align: left;
+      }
+    }
+  }
+}
+
+.existingAccounts {
+  padding: 30px 0;
+
+  :global {
+    .ant-btn + .ant-btn {
+      margin-left: 15px;
+    }
+  }
+
+  .defaultLabel {
+    font-size: 14px;
+    display: inline-block;
+    text-align: center;
+    min-width: 100px;
+
+    &:global {
+      + .ant-btn {
+        margin-left: 15px;
+      }
+    }
+  }
+
+  + .createAccount {
+    margin-top: 0;
+
+    h2 {
+      text-align: left;
+    }
+  }
+}
+
+.footer {
+  padding: @padding-lg 0;
+}
+
+.tradingTerms {
+  padding: @padding-lg 0;
+  border-top: 1px solid @border-color-base;
+  border-bottom: 1px solid @border-color-base;
+  margin-bottom: @padding-lg;
+}
+
+.addCC {
+  text-align: center;
+  margin: @padding-md;
+}
+
+.ccDetails {
+  text-align: left;
+
+  dt {
+    font-weight: 600;
+    display: inline-block;
+    min-width: 200px;
+  }
+
+  dd {
+    display: inline-block;
+    width: ~'calc(100% - 200px)';
+  }
+}
+
+.buttons {
+  text-align: center;
+
+  em {
+    font-size: 14px;
+  }
+}

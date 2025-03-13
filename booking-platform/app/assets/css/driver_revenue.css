@@ -1,0 +1,56 @@
+body {
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: 11pt;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+th {
+    vertical-align: bottom;
+    font-size: 11pt;
+    font-weight: bold;
+    padding: 3pt 3pt 0;
+    line-height: 1.1;
+    font-family: "Arial Narrow", Arial, sans-serif;
+}
+
+.table-header {
+    font-size: 20pt;
+    font-family: "Arial Narrow", Arial, sans-serif;
+}
+
+.table-header span {
+    font-size: 14pt;
+    font-weight: normal;
+    font-family: "Arial Narrow", Arial, sans-serif;
+}
+
+.data-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.data-table td {
+    padding: 3pt 3pt 0;
+    font-family: "Arial Narrow", Arial, sans-serif;
+    vertical-align: top;
+}
+
+.numeric {
+    text-align: right;
+}
+
+.text-header,
+.text-cell {
+    text-align: left;
+}
+
+.highlight-row td {
+    background-color: #f2f5f7;
+}
+
+.total-row td {
+    font-weight: bold;
+}

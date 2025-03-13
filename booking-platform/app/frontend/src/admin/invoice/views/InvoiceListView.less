@@ -1,0 +1,19 @@
+@import (reference) '../../../styles/defs/_variables';
+
+.currencyColumn {
+  composes: alignRight from global;
+}
+
+.actionsMenu {
+  a {
+    color: @link-color;
+  }
+}
+
+.invoiceList {
+  :global {
+    .ant-table-tbody > tr > td {
+      vertical-align: top;
+    }
+  }
+}
